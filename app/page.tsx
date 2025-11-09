@@ -93,6 +93,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Related Keywords Section */}
+      <section className='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8'>
+        <div className='text-center'>
+          <h2 className='mb-6 text-3xl font-bold text-gray-900'>
+            {t('home.relatedKeywords.title')}
+          </h2>
+          <div className='flex flex-wrap justify-center gap-4'>
+            {[
+              t('home.relatedKeywords.keyword1'),
+              t('home.relatedKeywords.keyword2'),
+              t('home.relatedKeywords.keyword3'),
+            ].map((keyword: string, index: number) => (
+              <span
+                key={index}
+                className='rounded-full bg-blue-100 px-6 py-2 text-lg font-medium text-gray-900 transition-colors hover:bg-blue-200'
+              >
+                {keyword}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Popular Tools Section */}
       <section className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8'>
         <div className='mb-12 text-center'>

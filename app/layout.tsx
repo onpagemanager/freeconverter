@@ -14,9 +14,21 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: 'JPG PDF 변환 - ImageConverter',
+  title: '무료 이미지 변환기 | JPG, PNG, PDF 파일을 한 번에 변환하세요',
   description:
-    '이미지 파일을 고품질 PDF로 변환하세요. JPG, PNG, BMP, GIF, TIFF 형식 지원',
+    '모든파일을 무료 변환합니다. JPG, PNG, PDF 등 모든 파일 형식을 무료로 변환할 수 있는 온라인 변환기입니다. 설치 없이 빠르고 안전하게 이미지·문서를 변환하세요. 100% 무료로 이용 가능합니다',
+  keywords: [
+    '무료 이미지 변환',
+    '이미지용량줄이기',
+    '이미지 to PDF',
+    '온라인 파일 변환',
+    '무료 PDF 변환기',
+    'JPG PNG 변환기',
+    'OCR변환',
+    '이미지변환사이트',
+    '핸드폰사진 변환',
+    'PDF 변환',
+  ],
 };
 
 export default function RootLayout({

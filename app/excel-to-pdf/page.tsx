@@ -104,20 +104,8 @@ export default function ExcelToPdfPage() {
       });
       
       // 2) jsPDF로 PDF 생성
-      const jsPDFModule = await import('jspdf');
-      // jsPDF v3.x에서는 { jsPDF } 형태로 named export 사용
-      let jsPDF: any;
-      if (jsPDFModule.jsPDF) {
-        jsPDF = jsPDFModule.jsPDF;
-      } else if (jsPDFModule.default) {
-        jsPDF = jsPDFModule.default;
-      } else {
-        jsPDF = jsPDFModule;
-      }
-
-      if (typeof jsPDF !== 'function' && typeof jsPDF !== 'object') {
-        throw new Error('jsPDF를 올바르게 로드할 수 없습니다.');
-      }
+      // @ts-ignore - jsPDF 타입 정의 문제 (named export 지원)
+      const { jsPDF } = await import('jspdf');
 
       const pdf = new jsPDF();
       

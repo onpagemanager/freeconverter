@@ -29,12 +29,20 @@
   },
   "home": {
     "hero": {
-      "title": "우리는 PDF를 쉽게 만듭니다.",
+      "title": "무료 이미지 변환기 | JPG, PNG, PDF 파일을 한 번에 변환하세요",
       "description": "더 생산적이고 스마트한 문서 작업에 필요한 모든 도구를 만나보세요.",
       "cta": {
         "start": "무료 체험판 시작",
         "viewAll": "전체 PDF 도구 살펴보기"
       }
+    },
+    "relatedKeywords": {
+      "title": "연관검색어",
+      "keywords": [
+        "이미지변환사이트",
+        "핸드폰사진 변환",
+        "PDF 변환"
+      ]
     },
     "popular": {
       "title": "가장 인기있는 PDF 도구",
