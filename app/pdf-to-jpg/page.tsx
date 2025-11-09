@@ -123,8 +123,8 @@ export default function PdfToJpgPage() {
         canvas.width = viewport.width;
         canvas.height = viewport.height;
 
-        // 페이지 렌더링
-        await page.render({ canvasContext: context, viewport }).promise;
+        // 페이지 렌더링 (PDF.js 최신 버전에서 canvas 속성 필요)
+        await page.render({ canvasContext: context, viewport, canvas }).promise;
 
         // 캔버스를 JPG Blob으로 변환
         const jpegBlob: Blob | null = await new Promise(resolve =>

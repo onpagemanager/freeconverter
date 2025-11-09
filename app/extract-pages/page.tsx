@@ -152,6 +152,9 @@ export default function ExtractPagesPage() {
       return;
     }
 
+    // 브라우저 환경에서만 실행 (Blob은 브라우저 전용 API)
+    if (typeof window === 'undefined') return;
+
     setIsProcessing(true);
     setExtractedFiles([]);
 
@@ -172,6 +175,12 @@ export default function ExtractPagesPage() {
         return;
       }
 
+      // Blob 생성은 브라우저 환경에서만 가능 (동적 참조로 빌드 시 오류 방지)
+      const BlobConstructor = (window as any).Blob;
+      if (!BlobConstructor) {
+        throw new Error('Blob API를 사용할 수 없습니다.');
+      }
+
       if (extractMode === 'single') {
         // 하나의 PDF로 추출: 선택된 모든 페이지를 하나의 PDF로 묶기
         const newPdf = await PDFDocument.create();
@@ -188,7 +197,7 @@ export default function ExtractPagesPage() {
         const pdfBytes = await newPdf.save();
 
         // Blob으로 변환하여 상태에 저장
-        const extractedBlob = new Blob([pdfBytes], {
+        const extractedBlob = new BlobConstructor([pdfBytes], {
           type: 'application/pdf',
         });
         setExtractedFiles([extractedBlob]);
@@ -209,7 +218,7 @@ export default function ExtractPagesPage() {
             const pdfBytes = await newPdf.save();
 
             // Blob으로 변환하여 배열에 추가
-            const pdfBlob = new Blob([pdfBytes], {
+            const pdfBlob = new BlobConstructor([pdfBytes], {
               type: 'application/pdf',
             });
             extractedPdfFiles.push(pdfBlob);

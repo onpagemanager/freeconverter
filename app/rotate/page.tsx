@@ -200,6 +200,9 @@ export default function RotatePdfPage() {
   const handleApplyRotation = useCallback(async () => {
     if (!selectedFile) return;
 
+    // 브라우저 환경에서만 실행 (Blob은 브라우저 전용 API)
+    if (typeof window === 'undefined') return;
+
     setIsProcessing(true);
     setProcessedFile(null);
 
@@ -229,8 +232,12 @@ export default function RotatePdfPage() {
       // 회전이 적용된 PDF를 바이트 배열로 변환
       const pdfBytes = await pdfDoc.save();
 
-      // Blob으로 변환하여 상태에 저장
-      const processedBlob = new Blob([pdfBytes], {
+      // Blob으로 변환하여 상태에 저장 (동적 참조로 빌드 시 오류 방지)
+      const BlobConstructor = (window as any).Blob;
+      if (!BlobConstructor) {
+        throw new Error('Blob API를 사용할 수 없습니다.');
+      }
+      const processedBlob = new BlobConstructor([pdfBytes], {
         type: 'application/pdf',
       });
 

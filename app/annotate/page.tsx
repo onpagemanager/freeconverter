@@ -137,6 +137,9 @@ export default function AnnotatePdfPage() {
   const handleAnnotatePdf = useCallback(async () => {
     if (!selectedFile) return;
 
+    // 브라우저 환경에서만 실행 (Blob은 브라우저 전용 API)
+    if (typeof window === 'undefined') return;
+
     setIsProcessing(true);
     try {
       const arrayBuffer = await selectedFile.arrayBuffer();
@@ -145,7 +148,12 @@ export default function AnnotatePdfPage() {
       // 주석이 추가된 PDF 생성 (여기서는 기본적으로 원본과 동일)
       // 실제 주석 기능은 더 복잡한 구현이 필요
       const pdfBytes = await pdfDoc.save();
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      // Blob 생성은 브라우저 환경에서만 가능 (동적 참조로 빌드 시 오류 방지)
+      const BlobConstructor = (window as any).Blob;
+      if (!BlobConstructor) {
+        throw new Error('Blob API를 사용할 수 없습니다.');
+      }
+      const blob = new BlobConstructor([pdfBytes], { type: 'application/pdf' });
       setAnnotatedFile(blob);
     } catch (error) {
       console.error('PDF 주석 처리 오류:', error);

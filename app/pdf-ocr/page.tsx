@@ -83,6 +83,9 @@ export default function PdfOcrPage() {
   const handleConvert = useCallback(async () => {
     if (!selectedFile) return;
 
+    // 브라우저 환경에서만 실행 (Blob은 브라우저 전용 API)
+    if (typeof window === 'undefined') return;
+
     setIsProcessing(true);
     setConvertedFile(null);
 
@@ -284,7 +287,12 @@ export default function PdfOcrPage() {
 
       // 7) 텍스트 레이어가 추가된 PDF 생성
       const pdfBytes = await pdfDoc.save();
-      const convertedBlob = new Blob([pdfBytes], {
+      // Blob 생성은 브라우저 환경에서만 가능 (동적 참조로 빌드 시 오류 방지)
+      const BlobConstructor = (window as any).Blob;
+      if (!BlobConstructor) {
+        throw new Error('Blob API를 사용할 수 없습니다.');
+      }
+      const convertedBlob = new BlobConstructor([pdfBytes], {
         type: 'application/pdf',
       });
 

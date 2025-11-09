@@ -98,6 +98,7 @@ export default function WordToPdfPage() {
 
       try {
         // HTML로 변환 시도 (서식 정보 포함, 표와 줄바꿈 유지)
+        // styleMap은 mammoth.js에서 지원하지만 타입 정의에 없어서 타입 단언 사용
         const result = await mammoth.convertToHtml({ 
           arrayBuffer: fileBuffer,
           // 표 스타일 보존
@@ -106,7 +107,7 @@ export default function WordToPdfPage() {
             "p[style-name='Heading 2'] => h2:fresh",
             "r[style-name='Strong'] => strong",
           ]
-        });
+        } as any);
         htmlContent = result.value;
       } catch (mammothError) {
         console.warn('HTML 변환 실패, 텍스트만 추출로 진행합니다.', mammothError);

@@ -145,6 +145,9 @@ export default function SplitPage() {
   const handleSplit = useCallback(async () => {
     if (!selectedFile) return;
 
+    // 브라우저 환경에서만 실행 (Blob은 브라우저 전용 API)
+    if (typeof window === 'undefined') return;
+
     setIsProcessing(true);
     setSplitFiles([]);
 
@@ -168,6 +171,11 @@ export default function SplitPage() {
 
       // 각 페이지를 개별 PDF 파일로 생성
       const splitPdfFiles: Blob[] = [];
+      // Blob 생성은 브라우저 환경에서만 가능 (동적 참조로 빌드 시 오류 방지)
+      const BlobConstructor = (window as any).Blob;
+      if (!BlobConstructor) {
+        throw new Error('Blob API를 사용할 수 없습니다.');
+      }
 
       for (const pageNum of pagesToSplit) {
         // 페이지 번호가 유효한지 확인 (1부터 시작)
@@ -188,7 +196,7 @@ export default function SplitPage() {
           const pdfBytes = await newPdf.save();
 
           // Blob으로 변환하여 배열에 추가
-          const pdfBlob = new Blob([pdfBytes], {
+          const pdfBlob = new BlobConstructor([pdfBytes], {
           type: 'application/pdf',
         });
           splitPdfFiles.push(pdfBlob);

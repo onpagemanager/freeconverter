@@ -164,6 +164,7 @@ export default function EditPdfPage() {
         const renderContext = {
           canvasContext: pdfContext,
           viewport: viewport,
+          canvas: pdfCanvas, // PDF.js 최신 버전에서 canvas 속성 필요
         };
 
         await page.render(renderContext).promise;
@@ -300,6 +301,9 @@ export default function EditPdfPage() {
   const handleEditPdf = useCallback(async () => {
     if (!selectedFile || !pdfDocRef.current) return;
 
+    // 브라우저 환경에서만 실행 (Blob은 브라우저 전용 API)
+    if (typeof window === 'undefined') return;
+
     setIsProcessing(true);
     try {
       const arrayBuffer = await selectedFile.arrayBuffer();
@@ -372,7 +376,12 @@ export default function EditPdfPage() {
       }
 
       const pdfBytes = await pdfDoc.save();
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      // Blob 생성은 브라우저 환경에서만 가능 (동적 참조로 빌드 시 오류 방지)
+      const BlobConstructor = (window as any).Blob;
+      if (!BlobConstructor) {
+        throw new Error('Blob API를 사용할 수 없습니다.');
+      }
+      const blob = new BlobConstructor([pdfBytes], { type: 'application/pdf' });
       setEditedFile(blob);
     } catch (error) {
       console.error('PDF 편집 오류:', error);
