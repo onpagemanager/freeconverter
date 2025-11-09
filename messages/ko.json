@@ -1,0 +1,277 @@
+{
+  "menu": {
+    "compress": "압축하기",
+    "convert": "변환하기",
+    "organize": "정리",
+    "view-edit": "보기 및 편집",
+    "from-pdf": "PDF에서 변환",
+    "to-pdf": "PDF로 변환",
+    "merge": "PDF 합치기",
+    "split": "PDF 분할",
+    "rotate": "PDF 회전",
+    "delete-pages": "PDF 페이지 삭제",
+    "extract-pages": "PDF 페이지 추출",
+    "edit": "PDF 편집",
+    "annotate": "PDF 주석도구",
+    "pdf-to-word": "PDF 워드 변환",
+    "pdf-to-excel": "PDF 엑셀 변환",
+    "pdf-to-ppt": "PDF PPT 변환",
+    "pdf-to-jpg": "PDF JPG 변환",
+    "word-to-pdf": "워드 PDF 변환",
+    "excel-to-pdf": "엑셀 PDF 변환",
+    "ppt-to-pdf": "PPT PDF 변환",
+    "jpg-to-pdf": "JPG PDF 변환",
+    "pdf-ocr": "PDF OCR 변환"
+  },
+  "language": {
+    "korean": "한국어",
+    "english": "English"
+  },
+  "home": {
+    "hero": {
+      "title": "우리는 PDF를 쉽게 만듭니다.",
+      "description": "더 생산적이고 스마트한 문서 작업에 필요한 모든 도구를 만나보세요.",
+      "cta": {
+        "start": "무료 체험판 시작",
+        "viewAll": "전체 PDF 도구 살펴보기"
+      }
+    },
+    "popular": {
+      "title": "가장 인기있는 PDF 도구",
+      "description": "PDF를 무료로 변환, 압축, 편집할 수 있는 30가지 도구가 준비되어 있습니다. 지금 사용해 보세요!",
+      "tool": {
+        "pdfToWord": {
+          "name": "PDF 워드 변환",
+          "description": "PDF를 편집 가능한 Word 문서로 변환합니다"
+        },
+        "merge": {
+          "name": "PDF 합치기",
+          "description": "여러 PDF를 1개의 통합된 문서로 결합합니다"
+        },
+        "jpgToPdf": {
+          "name": "JPG PDF 변환",
+          "description": "JPG, PNG, BMP, GIF 및 TIFF 이미지를 PDF로 변환합니다"
+        },
+        "sign": {
+          "name": "PDF에 서명",
+          "description": "전자 서명을 만들고 문서에 서명해보세요"
+        },
+        "edit": {
+          "name": "PDF 편집",
+          "description": "PDF에 텍스트, 모양, 이미지, 자유형 주석을 추가합니다"
+        },
+        "compress": {
+          "name": "PDF 압축",
+          "description": "품질을 낮추지 않고 PDF의 크기를 줄입니다"
+        }
+      },
+      "tryIt": "사용해보기",
+      "viewAll": "전체 PDF 도구 보기"
+    },
+    "simple": {
+      "title": "단순한 작업을 간단하게",
+      "description": "Freeconvert, 모두가 사랑하게 될 세상에 단 하나뿐인 PDF 소프트웨어. 디지털 문서 작업을 시작하고 관리, 마무리하는 데 필요한 모든 도구를 Freeconvert에서 만나보세요."
+    },
+    "feature": {
+      "workWithFiles": {
+        "title": "파일에서 직접 문서 작업",
+        "description": "단순히 PDF 문서를 확인하는 것보다 더 많은 작업을 해보세요. 문서에 강조 표시를 하고 텍스트, 이미지, 도형, 자유형 주석을 원하는 대로 추가할 수 있습니다. 그 외 30가지 도구에 연결하여 파일을 더욱 개선해보세요.",
+        "cta": "지금 PDF 편집하기"
+      },
+      "digitalSignature": {
+        "title": "간편해진 디지털 서명",
+        "description": "양식 작성, 계약서 전자 서명, 계약 체결 등의 업무를 몇 가지 간단한 절차만으로 처리해 보세요. 이에 더해 전자 서명을 요청하고 모든 단계에서 사용자의 문서를 추적할 수 있습니다.",
+        "cta": "전자 서명하기"
+      },
+      "perfectDocument": {
+        "title": "Freeconvert로 만드는 완벽한 문서",
+        "description": "파일이 너무 큰가요? 파일을 압축해 크기를 줄여보세요. 특정 형식의 파일이 필요하신가요? 변환기를 사용해 파일을 원하는 형식으로 변환해 보세요. 문서 관리가 점점 복잡해지나요? 파일을 병합 및 분할하거나 여분의 페이지를 삭제해 보세요. Freeconvert에서 이 모든 기능을 만나보세요.",
+        "cta": "전체 PDF 도구 보기"
+      },
+      "allInOne": {
+        "title": "모든 문서 관리를 한 곳에서",
+        "description": "더는 여러 가지 앱을 넘나들며 작업하실 필요가 없습니다! Freeconvert 웹 플랫폼에서 직접 작업하면 여러 기기에서 파일을 저장, 관리, 공유하는 데 소요되는 시간을 절약하실 수 있습니다.",
+        "cta": "무료 체험판 시작"
+      }
+    },
+    "mobile": {
+      "title": "모바일에서 이용하기",
+      "description": "언제 어디서나 Freeconvert 모바일 앱으로 연결된 모든 기기에서 스캔한 문서 PDF 만들기, 문서 정리, 파일 공유 작업을 해 보세요.",
+      "googlePlay": "Get it on Google Play",
+      "appStore": "Download on the App Store"
+    },
+    "whyChoose": {
+      "title": "왜 Freeconvert를 선택해야 하나요?",
+      "trustedByUsers": {
+        "title": "수많은 사용자가 신뢰하는 서비스",
+        "description": "10억 명 이상의 사용자가 Freeconvert 서비스를 사용하며 간편해진 디지털 문서 작업을 경험하고 있습니다."
+      },
+      "trustedByBusiness": {
+        "title": "기업이 신뢰하는 서비스",
+        "description": "Freeconvert는 Capterra, G2, TrustPilot과 같은 주요 B2B 소프트웨어 순위 플랫폼에서 높은 평점을 달성한 PDF 소프트웨어 중 하나입니다."
+      },
+      "trustedByPartners": {
+        "title": "파트너사가 신뢰하는 서비스",
+        "description": "Freeconvert Chrome 확장 프로그램, Google Workspace, Dropbox 앱으로 추가 기능을 해제하세요. 모두 무료로 사용하실 수 있습니다."
+      },
+      "support": {
+        "title": "24시간 고객 지원 서비스",
+        "description": "24시간 고객 지원 서비스로 언제든지 필요한 도움을 제공해 드립니다."
+      },
+      "encryption": {
+        "title": "256비트 TLS 암호화",
+        "description": "모든 정보 전송은 256비트 TLS 암호화를 사용하여 안전하게 보호됩니다."
+      },
+      "security": {
+        "title": "보안 표준",
+        "description": "Freeconvert는 사용자 안전을 최우선으로 생각합니다. 당사는 ISO/IEC 27001 인증을 받았으며 GDPR, CCPA, nFADP를 준수합니다."
+      }
+    },
+    "trial": {
+      "title": "Freeconvert 무료 체험",
+      "description": "7일 무료 체험판을 시작하고 변환, 압축, 전자 서명, 등 전체 Freeconvert 도구를 무제한으로 사용해보세요.",
+      "cta": "무료 체험판 시작"
+    }
+  },
+  "edit": {
+    "title": "PDF Editor",
+    "description": "PDF에 텍스트, 이미지, 도형, 하이라이트, 주석을 쉽게 추가할 수 있습니다. Pro 계정으로 기존 텍스트도 편집할 수 있습니다.",
+    "selectFile": "파일 선택",
+    "dragDrop": "또는 파일을 여기로 끌어 놓으세요",
+    "supportedFormats": "지원하는 형식: PDF, DOC, XLS, PPT, PNG, JPG",
+    "editTools": "편집 도구",
+    "tool": {
+      "text": "텍스트 추가",
+      "image": "이미지 추가",
+      "shape": "도형 추가",
+      "highlight": "하이라이트",
+      "draw": "그리기"
+    },
+    "preview": "미리보기",
+    "processing": "처리 중...",
+    "editPdf": "편집하기",
+    "download": "다운로드",
+    "proFeature": {
+      "title": "Pro 기능 안내",
+      "description": "기존 텍스트 편집 기능은 Pro 계정에서만 사용할 수 있습니다. 7일 무료 체험판을 시작하고 모든 기능을 사용해보세요.",
+      "later": "나중에",
+      "trial": "7일 무료 체험"
+    },
+    "section": {
+      "title": "PDF 편집 - 간편하게",
+      "description": "문서 작업이 어렵지 않아야 합니다. 그래서 PDF 편집을 간소화하여 전문 문서에서 원하는 모든 작업을 자유롭게 수행할 수 있도록 했습니다."
+    },
+    "feature": {
+      "powerful": {
+        "title": "강력한 PDF 편집 - 완전히 간단",
+        "description": "'편집'이라고 하면 정말 편집을 의미합니다. 새 텍스트 추가, 기존 텍스트 편집, 하이라이트, 그리기, 도형 및 이미지 삽입 - 필요한 모든 것을 제공합니다. 사용하기 매우 간단하며 설정이나 온보딩이 필요 없습니다. 바로 시작하세요."
+      },
+      "organize": {
+        "title": "한눈에 보는 문서 정리",
+        "description": "정리 모드를 사용하여 재배열, 병합, 추출, 분할 등을 수행하세요. 다양한 파일 형식 내보내기 옵션으로 원하는 형식으로 문서를 저장할 수 있습니다. PDF를 압축하거나 평면화할 수도 있습니다."
+      },
+      "share": {
+        "title": "빠르게 저장, 쉽게 공유",
+        "description": "PDF 편집을 완료했나요? 편집된 파일을 Freeconvert, 기기 또는 Dropbox나 G Suite와 같은 연결된 앱 중 하나에 저장하거나 빠른 다운로드 링크로 공유하세요."
+      }
+    },
+    "howto": {
+      "title": "PDF 파일을 온라인에서 무료로 편집하는 방법",
+      "step1": "PDF 파일을 편집기에 가져오거나 드래그 앤 드롭하세요.",
+      "step2": "원하는 대로 텍스트, 이미지, 도형, 마크업 및 전자 서명을 추가하세요.",
+      "step3": "필요한 경우 문서 페이지를 정리하세요.",
+      "step4": "파일을 PDF 또는 다른 파일 형식으로 \"내보내기\"를 클릭하세요.",
+      "step5": "준비가 되면 편집된 PDF를 다운로드하세요. 끝!"
+    },
+    "security": {
+      "gdpr": {
+        "title": "GDPR 준수",
+        "description": "일반 데이터 보호 규정(GDPR)을 준수하여 개인 데이터를 올바르게 관리합니다."
+      },
+      "iso": {
+        "title": "ISO/IEC 27001 인증",
+        "description": "매년 ISO/IEC 27001 인증을 받아 정보의 안전성과 보안을 보장합니다."
+      },
+      "encryption": {
+        "title": "파일 전송 암호화",
+        "description": "편집, 압축 또는 변환 중에도 고급 TLS 암호화로 파일을 안전하게 보호합니다."
+      }
+    }
+  },
+  "annotate": {
+    "title": "Annotate PDF",
+    "description": "브라우저에서 PDF에 마크업, 하이라이트, 텍스트를 무료로 추가하세요. 더 빠른 피드백과 쉬운 편집을 위해 온라인에서 PDF에 주석을 쉽게 달 수 있습니다. 다운로드나 가입이 필요 없습니다.",
+    "selectFile": "파일 선택",
+    "dragDrop": "또는 파일을 여기로 끌어 놓으세요",
+    "supportedFormats": "지원하는 형식: PDF, DOC, XLS, PPT, PNG, JPG",
+    "tools": "주석 도구",
+    "tool": {
+      "highlight": "하이라이트",
+      "text": "텍스트 추가",
+      "draw": "그리기",
+      "underline": "밑줄",
+      "strikethrough": "취소선",
+      "shape": "도형",
+      "comment": "주석"
+    },
+    "preview": "미리보기",
+    "processing": "처리 중...",
+    "finish": "완료",
+    "download": "다운로드",
+    "section": {
+      "title": "모든 PDF에 명확성과 컨텍스트 추가",
+      "description": "계약서 검토, 프레젠테이션 준비, 양식 작성 또는 보고서에 피드백을 제공하는 경우, Freeconvert를 사용하면 PDF에 직접 텍스트, 그림, 이미지, 하이라이트를 쉽게 추가할 수 있습니다."
+    },
+    "feature": {
+      "clear": {
+        "title": "명확하고 체계적으로 유지",
+        "description": "색상, 도형, 콜아웃을 사용하여 핵심 포인트나 필요한 업데이트를 강조하세요. 주석을 깔끔하고 쉽게 따라갈 수 있게 유지하여 더 빠른 검토와 승인을 받으세요."
+      },
+      "forms": {
+        "title": "양식을 빠르게 작성",
+        "description": "자동 감지된 필드에 직접 정보를 추가하세요. 텍스트 상자를 추가할 필요 없이 바로 입력을 시작할 수 있습니다—빠르고 쉽습니다!"
+      },
+      "anywhere": {
+        "title": "언제 어디서나 작업",
+        "description": "Mac, Windows, Linux, iOS 또는 Android의 브라우저에서 주석을 추가하세요. 소프트웨어 다운로드나 학습 곡선이 없습니다. 업로드, 마크업, 공유만 하면 됩니다."
+      },
+      "immediate": {
+        "title": "즉시 시작—번거로움 없음",
+        "description": "브라우저에서 직접 PDF에 주석을 추가하세요. 다운로드, 가입, 복잡한 설정이 필요 없습니다. 업로드, 주석 추가, 진행만 하면 됩니다."
+      },
+      "keyInfo": {
+        "title": "핵심 정보 강조",
+        "description": "맞춤 하이라이트 색상과 다용도 연필 도구를 사용하여 텍스트, 그림 또는 섹션을 강조하여 검토를 더 빠르고 명확하게 만드세요."
+      },
+      "feedback": {
+        "title": "중요한 곳에 피드백 제공",
+        "description": "필요한 정확한 위치에 텍스트나 하이라이트를 추가하여 피드백이 항상 명확하고 관련성이 있으며 실행 가능하도록 하세요."
+      },
+      "secure": {
+        "title": "안전하고 비공개",
+        "description": "GDPR을 준수하고 ISO/IEC 27001 인증을 받았으며 TLS 암호화로 파일을 보호합니다. 추가 안심을 위해 파일은 1시간 후 자동으로 삭제됩니다."
+      },
+      "focus": {
+        "title": "독자가 집중할 곳 표시",
+        "description": "그림에 원을 그리거나, 구문에 밑줄을 긋거나, 화살표와 도형을 사용하여 PDF에서 주의를 이끌어 내세요. 사람들이 집중해야 할 곳에 의심의 여지가 없도록 하세요."
+      },
+      "device": {
+        "title": "모든 장치에서 주석 추가",
+        "description": "책상에 있든 이동 중이든, 인터넷 연결이 있는 모든 장치에서 PDF에 주석을 추가할 수 있습니다: 데스크톱, 태블릿 또는 모바일."
+      }
+    },
+    "howto": {
+      "title": "온라인에서 PDF 페이지에 무료로 주석을 다는 방법",
+      "step1": "PDF를 무료 주석 도구로 드래그 앤 드롭하세요.",
+      "step2": "도구 모음을 사용하여 텍스트, 그림 또는 도형을 추가하세요.",
+      "step3": "하이라이트, 밑줄, 취소선 등을 사용하여 텍스트에 마크업을 추가하세요.",
+      "step4": "완료를 클릭하여 PDF를 다운로드하거나 30개 이상의 도구로 더 편집하세요."
+    }
+  }
+}
+
+
+
+
+
+

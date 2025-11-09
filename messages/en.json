@@ -1,0 +1,277 @@
+{
+  "menu": {
+    "compress": "Compress",
+    "convert": "Convert",
+    "organize": "Organize",
+    "view-edit": "View & Edit",
+    "from-pdf": "From PDF",
+    "to-pdf": "To PDF",
+    "merge": "Merge PDF",
+    "split": "Split PDF",
+    "rotate": "Rotate PDF",
+    "delete-pages": "Delete PDF Pages",
+    "extract-pages": "Extract PDF Pages",
+    "edit": "Edit PDF",
+    "annotate": "Annotate PDF",
+    "pdf-to-word": "PDF to Word",
+    "pdf-to-excel": "PDF to Excel",
+    "pdf-to-ppt": "PDF to PPT",
+    "pdf-to-jpg": "PDF to JPG",
+    "word-to-pdf": "Word to PDF",
+    "excel-to-pdf": "Excel to PDF",
+    "ppt-to-pdf": "PPT to PDF",
+    "jpg-to-pdf": "JPG to PDF",
+    "pdf-ocr": "PDF OCR"
+  },
+  "language": {
+    "korean": "한국어",
+    "english": "English"
+  },
+  "home": {
+    "hero": {
+      "title": "We make PDFs easy.",
+      "description": "Discover all the tools you need to work more productively and intelligently with documents.",
+      "cta": {
+        "start": "Start Free Trial",
+        "viewAll": "View All PDF Tools"
+      }
+    },
+    "popular": {
+      "title": "Most Popular PDF Tools",
+      "description": "30 tools are available to convert, compress, and edit PDFs for free. Try them now!",
+      "tool": {
+        "pdfToWord": {
+          "name": "PDF to Word",
+          "description": "Convert PDF to editable Word documents"
+        },
+        "merge": {
+          "name": "Merge PDF",
+          "description": "Combine multiple PDFs into one unified document"
+        },
+        "jpgToPdf": {
+          "name": "JPG to PDF",
+          "description": "Convert JPG, PNG, BMP, GIF, and TIFF images to PDF"
+        },
+        "sign": {
+          "name": "Sign PDF",
+          "description": "Create and add electronic signatures to documents"
+        },
+        "edit": {
+          "name": "Edit PDF",
+          "description": "Add text, shapes, images, and freehand annotations to PDFs"
+        },
+        "compress": {
+          "name": "Compress PDF",
+          "description": "Reduce PDF size without lowering quality"
+        }
+      },
+      "tryIt": "Try it",
+      "viewAll": "View All PDF Tools"
+    },
+    "simple": {
+      "title": "Simplify Simple Tasks",
+      "description": "Freeconvert, the world's only PDF software that everyone will love. Discover all the tools you need to start, manage, and finish your digital document work with Freeconvert."
+    },
+    "feature": {
+      "workWithFiles": {
+        "title": "Work with Documents Directly from Files",
+        "description": "Do more than just view PDF documents. Highlight documents and add text, images, shapes, and freehand annotations as you wish. Connect to 30 other tools to further improve your files.",
+        "cta": "Edit PDF Now"
+      },
+      "digitalSignature": {
+        "title": "Simplified Digital Signatures",
+        "description": "Handle tasks such as filling out forms, signing contracts electronically, and closing deals with just a few simple steps. In addition, you can request electronic signatures and track your documents at every step.",
+        "cta": "Sign Electronically"
+      },
+      "perfectDocument": {
+        "title": "Perfect Documents Made with Freeconvert",
+        "description": "Is your file too large? Compress it to reduce its size. Need a file in a specific format? Use the converter to convert files to your desired format. Is document management getting complicated? Try merging and splitting files or deleting extra pages. Discover all these features with Freeconvert.",
+        "cta": "View All PDF Tools"
+      },
+      "allInOne": {
+        "title": "All Document Management in One Place",
+        "description": "You no longer need to work across multiple apps! Working directly on the Freeconvert web platform saves time spent storing, managing, and sharing files across multiple devices.",
+        "cta": "Start Free Trial"
+      }
+    },
+    "mobile": {
+      "title": "Use on Mobile",
+      "description": "Create PDFs from scanned documents, organize documents, and share files on any device connected to the Freeconvert mobile app, anytime, anywhere.",
+      "googlePlay": "Get it on Google Play",
+      "appStore": "Download on the App Store"
+    },
+    "whyChoose": {
+      "title": "Why Choose Freeconvert?",
+      "trustedByUsers": {
+        "title": "Trusted by Millions of Users",
+        "description": "Over 1 billion users use Freeconvert services and experience simplified digital document work."
+      },
+      "trustedByBusiness": {
+        "title": "Trusted by Businesses",
+        "description": "Freeconvert is one of the PDF software solutions that has achieved high ratings on major B2B software ranking platforms such as Capterra, G2, and TrustPilot."
+      },
+      "trustedByPartners": {
+        "title": "Trusted by Partners",
+        "description": "Unlock additional features with the Freeconvert Chrome extension, Google Workspace, and Dropbox apps. All are available for free."
+      },
+      "support": {
+        "title": "24/7 Customer Support",
+        "description": "We provide help whenever you need it with 24/7 customer support."
+      },
+      "encryption": {
+        "title": "256-bit TLS Encryption",
+        "description": "All information transmission is securely protected using 256-bit TLS encryption."
+      },
+      "security": {
+        "title": "Security Standards",
+        "description": "Freeconvert prioritizes user safety. We are ISO/IEC 27001 certified and comply with GDPR, CCPA, and nFADP."
+      }
+    },
+    "trial": {
+      "title": "Freeconvert Free Trial",
+      "description": "Start a 7-day free trial and use all Freeconvert tools including conversion, compression, and electronic signatures without limits.",
+      "cta": "Start Free Trial"
+    }
+  },
+  "edit": {
+    "title": "PDF Editor",
+    "description": "Easily add text, images, shapes, highlights, and annotations to your PDFs. With a Pro account, you can also edit existing text.",
+    "selectFile": "Choose Files",
+    "dragDrop": "or drop files here",
+    "supportedFormats": "Supported formats: PDF, DOC, XLS, PPT, PNG, JPG",
+    "editTools": "Edit Tools",
+    "tool": {
+      "text": "Add Text",
+      "image": "Add Image",
+      "shape": "Add Shape",
+      "highlight": "Highlight",
+      "draw": "Draw"
+    },
+    "preview": "Preview",
+    "processing": "Processing...",
+    "editPdf": "Edit PDF",
+    "download": "Download",
+    "proFeature": {
+      "title": "Pro Feature",
+      "description": "Direct text editing is available with a Pro account. Start a 7-day free trial and experience all features.",
+      "later": "Later",
+      "trial": "Try 7 Days Free"
+    },
+    "section": {
+      "title": "Edit Your PDFs—The Easy Way",
+      "description": "Document work shouldn't be hard. That's why we've simplified PDF editing, so you can have the freedom and flexibility to do anything you want with your professional documents."
+    },
+    "feature": {
+      "powerful": {
+        "title": "Powerful PDF Editing—Totally Simple",
+        "description": "When we say 'edit,' we really mean 'edit.' Add new text, edit existing text, highlight, draw, insert shapes and images—whatever you need, we've got it. So simple to use, no setup or onboarding needed. Get started right away."
+      },
+      "organize": {
+        "title": "Document Organization at a Glance",
+        "description": "Use the Organize mode to rearrange, merge, extract, split, and more. With a host of file-type export options, save your document in any format you like. You can even compress or flatten your PDF—your document, your way."
+      },
+      "share": {
+        "title": "Quick to Save, Easy to Share",
+        "description": "Done making magic and editing your PDF? Simply save your edited file to Freeconvert, your device, or any of our connected apps, such as Dropbox or G Suite, or share it with a quick download link."
+      }
+    },
+    "howto": {
+      "title": "How To Edit a PDF File Online for Free",
+      "step1": "Import or drag & drop your PDF file to our editor.",
+      "step2": "Add text, images, shapes, markups, and e-signatures as desired.",
+      "step3": "Organize document pages if needed.",
+      "step4": "Click to \"Export\" your file as a PDF or other file type.",
+      "step5": "Download your edited PDF when ready—that's it!"
+    },
+    "security": {
+      "gdpr": {
+        "title": "GDPR Compliance",
+        "description": "We comply with the General Data Protection Regulation (GDPR), ensuring we manage your personal data correctly."
+      },
+      "iso": {
+        "title": "ISO/IEC 27001 Certification",
+        "description": "We are audited annually for our ISO/IEC 27001 certification, a mark that assures the safety and security of your information."
+      },
+      "encryption": {
+        "title": "File Transfer Encryption",
+        "description": "We even keep your files secure while you're editing, compressing, or converting them, with high-tech TLS encryption."
+      }
+    }
+  },
+  "annotate": {
+    "title": "Annotate PDF",
+    "description": "Mark up, highlight, and add text on your PDFs right in your browser for free. Easily annotate PDFs online for faster feedback and easier edits. No downloads or signups needed.",
+    "selectFile": "Choose Files",
+    "dragDrop": "or drop files here",
+    "supportedFormats": "Supported formats: PDF, DOC, XLS, PPT, PNG, JPG",
+    "tools": "Annotation Tools",
+    "tool": {
+      "highlight": "Highlight",
+      "text": "Add Text",
+      "draw": "Draw",
+      "underline": "Underline",
+      "strikethrough": "Strikethrough",
+      "shape": "Shape",
+      "comment": "Comment"
+    },
+    "preview": "Preview",
+    "processing": "Processing...",
+    "finish": "Finish",
+    "download": "Download",
+    "section": {
+      "title": "Add Clarity and Context to Any PDF",
+      "description": "Whether you're reviewing a contract, preparing a presentation, filling out a form, or giving feedback on a report, Freeconvert makes it easy to add text, drawings, images, and highlights directly on your PDFs."
+    },
+    "feature": {
+      "clear": {
+        "title": "Stay Clear & Organized",
+        "description": "Use colors, shapes, and callouts to emphasize key points or needed updates. Keep your annotations neat and easy to follow for faster reviews and approvals."
+      },
+      "forms": {
+        "title": "Fill Out Forms Quickly",
+        "description": "Add your information directly to the auto-detected fields. You can just start typing without needing to add any textboxes—quick and easy!"
+      },
+      "anywhere": {
+        "title": "Work Anywhere, Anytime",
+        "description": "Annotate from your browser on Mac, Windows, Linux, iOS, or Android. No software downloads, no learning curve. Just upload, mark up, and share."
+      },
+      "immediate": {
+        "title": "Start Immediately—No Fuss",
+        "description": "Annotate PDFs directly in your browser. No downloads, signups, or complicated setup. Just upload, annotate, and be on your way."
+      },
+      "keyInfo": {
+        "title": "Highlight Key Information",
+        "description": "Emphasize text, figures, or sections with custom highlight colors and a versatile pencil tool to make reviews faster and clearer."
+      },
+      "feedback": {
+        "title": "Feedback Where It Counts",
+        "description": "Add text or highlights exactly where you need them, so your feedback is always clear, relevant, and actionable."
+      },
+      "secure": {
+        "title": "Secure & Private",
+        "description": "We're GDPR compliant, ISO/IEC 27001 certified, and we protect your files with TLS encryption. Files are auto-deleted after one hour for extra peace of mind."
+      },
+      "focus": {
+        "title": "Show Readers Where to Focus",
+        "description": "Circle figures, underline phrases, or use arrows and shapes to guide attention in your PDF. Leave no doubt where people need to focus."
+      },
+      "device": {
+        "title": "Annotate on Any Device",
+        "description": "Whether you're at your desk or on the go, annotate PDFs from any device with internet access: desktop, tablet, or mobile."
+      }
+    },
+    "howto": {
+      "title": "How To Annotate PDF Pages Online for Free",
+      "step1": "Drag & drop your PDF into our free Annotate tool.",
+      "step2": "Use the toolbar to add text, drawings, or shapes.",
+      "step3": "Markup the text with highlights, underlines, strikethroughs, and more.",
+      "step4": "Click 'Finish' to download your PDF, or edit further with 30+ tools."
+    }
+  }
+}
+
+
+
+
+
+
