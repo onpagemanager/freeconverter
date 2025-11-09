@@ -128,6 +128,7 @@ export default function WordToPdfPage() {
       }
 
       // 2) jspdf를 사용하여 PDF 생성 (한글 폰트 지원)
+      // @ts-ignore - jsPDF 타입 정의 문제 (named export 지원)
       const { jsPDF } = await import('jspdf');
       
       // PDF 인스턴스 생성
