@@ -70,7 +70,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className='mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8'>
         <div className='text-center'>
-          <h1 className='mb-6 text-5xl font-bold text-gray-900 sm:text-6xl lg:text-7xl'>
+          <h1 className='max-w-3xl mx-auto mb-6 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl leading-tight'>
             {t('home.hero.title')}
           </h1>
           <p className='mx-auto mb-8 max-w-2xl text-xl text-gray-600'>
@@ -96,7 +96,7 @@ export default function Home() {
       {/* Related Keywords Section */}
       <section className='mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8'>
         <div className='text-center'>
-          <h2 className='mb-6 text-3xl font-bold text-gray-900'>
+          <h2 className='mb-6 text-3xl font-bold text-gray-900 sr-only'>
             {t('home.relatedKeywords.title')}
           </h2>
           <div className='flex flex-wrap justify-center gap-4'>

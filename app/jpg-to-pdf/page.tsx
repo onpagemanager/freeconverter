@@ -168,7 +168,7 @@ export default function JpgToPdfPage() {
       // jsPDF 동적 import
       // @ts-ignore - jsPDF 타입 정의 문제
       const { jsPDF } = await import('jspdf');
-      
+
       // PDF 인스턴스 생성 (방향 설정)
       const pdf = new jsPDF({
         orientation: orientation === 'portrait' ? 'portrait' : 'landscape',
@@ -193,7 +193,7 @@ export default function JpgToPdfPage() {
         const img = await new Promise<HTMLImageElement>((resolve, reject) => {
           const img = new Image();
           img.onload = () => resolve(img);
-          img.onerror = (err) => {
+          img.onerror = err => {
             console.error('이미지 로드 실패:', err);
             reject(new Error(`이미지 로드 실패: ${imageFile.file.name}`));
           };
@@ -239,7 +239,10 @@ export default function JpgToPdfPage() {
           pdf.addImage(img.src, imageFormat, x, y, imgWidth, imgHeight);
         } catch (addImageError) {
           // 형식이 지원되지 않는 경우 JPEG로 재시도
-          console.warn(`${imageFormat} 형식 지원 실패, JPEG로 재시도:`, addImageError);
+          console.warn(
+            `${imageFormat} 형식 지원 실패, JPEG로 재시도:`,
+            addImageError
+          );
           pdf.addImage(img.src, 'JPEG', x, y, imgWidth, imgHeight);
         }
 
@@ -251,8 +254,11 @@ export default function JpgToPdfPage() {
       setConvertedFile(pdfBlob);
     } catch (error) {
       console.error('변환 중 오류 발생:', error);
-      const errorMessage = error instanceof Error ? error.message : '알 수 없는 오류';
-      alert(`변환 중 오류가 발생했습니다: ${errorMessage}\n\n다시 시도해주세요.`);
+      const errorMessage =
+        error instanceof Error ? error.message : '알 수 없는 오류';
+      alert(
+        `변환 중 오류가 발생했습니다: ${errorMessage}\n\n다시 시도해주세요.`
+      );
     } finally {
       setIsProcessing(false);
     }
@@ -265,12 +271,13 @@ export default function JpgToPdfPage() {
     const url = URL.createObjectURL(convertedFile);
     const a = document.createElement('a');
     a.href = url;
-    
+
     // 파일명 생성: 이미지가 하나면 원본 파일명 사용, 여러 개면 기본 이름 사용
-    const fileName = selectedImages.length === 1
-      ? `${selectedImages[0].file.name.replace(/\.[^/.]+$/, '')}.pdf`
-      : 'converted-images.pdf';
-    
+    const fileName =
+      selectedImages.length === 1
+        ? `${selectedImages[0].file.name.replace(/\.[^/.]+$/, '')}.pdf`
+        : 'converted-images.pdf';
+
     a.download = fileName;
     document.body.appendChild(a);
     a.click();
@@ -679,10 +686,10 @@ export default function JpgToPdfPage() {
               </h3>
               <p className='text-sm text-gray-700'>
                 Freeconvert 도구는 JPG, PNG, BMP, GIF, TIFF 형식을 지원합니다.
-                이미지를 업로드하기만 하면 Freeconvert에서 해당 파일을 고품질 PDF로
-                변환해 드립니다. 또한 Freeconvert 변환기를 사용하면 워드(DOC,
-                DOCX), 엑셀(XLS, XLSX), 파워포인트(PPT, PPTX)를 비롯한 기타 문서
-                유형도 PDF로 변환할 수 있습니다.
+                이미지를 업로드하기만 하면 Freeconvert에서 해당 파일을 고품질
+                PDF로 변환해 드립니다. 또한 Freeconvert 변환기를 사용하면
+                워드(DOC, DOCX), 엑셀(XLS, XLSX), 파워포인트(PPT, PPTX)를 비롯한
+                기타 문서 유형도 PDF로 변환할 수 있습니다.
               </p>
             </div>
             <div className='rounded-lg border border-gray-200 bg-gray-50 p-6'>
@@ -723,9 +730,9 @@ export default function JpgToPdfPage() {
                 JPG를 PDF로 변환할 때 데이터는 안전하게 보호되나요?
               </h3>
               <p className='text-sm text-gray-700'>
-                물론이죠! Freeconvert는 최신 TLS 암호화를 사용하여 파일을 안전하게
-                보호합니다. 또한, 처리 후 1시간이 지나면 서버에서 모든 이미지
-                파일을 자동 삭제합니다.
+                물론이죠! Freeconvert는 최신 TLS 암호화를 사용하여 파일을
+                안전하게 보호합니다. 또한, 처리 후 1시간이 지나면 서버에서 모든
+                이미지 파일을 자동 삭제합니다.
               </p>
             </div>
             <div className='rounded-lg border border-gray-200 bg-gray-50 p-6'>
@@ -735,8 +742,8 @@ export default function JpgToPdfPage() {
               <p className='text-sm text-gray-700'>
                 물론이죠. 무료 계정을 이용하면 모든 문서 형식을 자유롭게 변환할
                 수 있습니다. Pro를 구독하면 30가지가 넘는 PDF 도구와 무제한 변환
-                기능을 이용하실 수 있습니다. 지금 7일 무료 체험판을
-                사용해보세요. 구독은 체험 기간 내에 언제든지 취소할 수 있습니다.
+                기능을 이용하실 수 있습니다. 지금 무료로 사용해보세요. 구독은
+                체험 기간 내에 언제든지 취소할 수 있습니다.
               </p>
             </div>
           </div>

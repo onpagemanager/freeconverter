@@ -14,7 +14,7 @@ const notoSansKr = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: '무료 이미지 변환기 | JPG, PNG, PDF 파일을 한 번에 변환하세요',
+  title: '무료 이미지 변환기 | JPG, PNG, PDF 한 번에 변환',
   description:
     '모든파일을 무료 변환합니다. JPG, PNG, PDF 등 모든 파일 형식을 무료로 변환할 수 있는 온라인 변환기입니다. 설치 없이 빠르고 안전하게 이미지·문서를 변환하세요. 100% 무료로 이용 가능합니다',
   keywords: [
