@@ -31,6 +31,7 @@ const translations: Record<Language, Record<string, string>> = {
     // 메뉴 항목
     'menu.compress': '압축하기',
     'menu.convert': '변환하기',
+    'menu.image-convert': '이미지변환',
     'menu.organize': '정리',
     'menu.view-edit': '보기 및 편집',
     'menu.from-pdf': 'PDF에서 변환',
@@ -55,6 +56,7 @@ const translations: Record<Language, Record<string, string>> = {
     'menu.ppt-to-pdf': 'PPT PDF 변환',
     'menu.jpg-to-pdf': 'JPG PDF 변환',
     'menu.pdf-ocr': 'PDF OCR 변환',
+    'menu.blog': '블로그',
     // 언어 선택
     'language.korean': '한국어',
     'language.english': 'English',
@@ -251,6 +253,7 @@ const translations: Record<Language, Record<string, string>> = {
     // Menu items
     'menu.compress': 'Compress',
     'menu.convert': 'Convert',
+    'menu.image-convert': 'Image Convert',
     'menu.organize': 'Organize',
     'menu.view-edit': 'View & Edit',
     'menu.from-pdf': 'From PDF',
@@ -275,6 +278,7 @@ const translations: Record<Language, Record<string, string>> = {
     'menu.ppt-to-pdf': 'PPT to PDF',
     'menu.jpg-to-pdf': 'JPG to PDF',
     'menu.pdf-ocr': 'PDF OCR',
+    'menu.blog': 'Blog',
     // Language selection
     'language.korean': '한국어',
     'language.english': 'English',

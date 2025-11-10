@@ -36,6 +36,7 @@ export default function Header() {
   const menuItems: MenuItem[] = [
     { nameKey: 'menu.compress', href: '/compress' },
     { nameKey: 'menu.convert', href: '/convert' },
+    { nameKey: 'menu.image-convert', href: '/image-convert' },
     {
       nameKey: 'menu.organize',
       children: [
@@ -72,6 +73,7 @@ export default function Header() {
         { nameKey: 'menu.pdf-ocr', href: '/pdf-ocr' },
       ],
     },
+    { nameKey: 'menu.blog', href: '/blogs' },
   ];
 
   // 드롭다운 열기/닫기
