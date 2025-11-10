@@ -138,7 +138,7 @@ const translations: Record<Language, Record<string, string>> = {
       'Freeconvert는 사용자 안전을 최우선으로 생각합니다. 당사는 ISO/IEC 27001 인증을 받았으며 GDPR, CCPA, nFADP를 준수합니다.',
     'home.trial.title': 'Freeconvert 무료 체험',
     'home.trial.description':
-      '시작하기하고 변환, 압축, 전자 서명, 등 전체 Freeconvert 도구를 무제한으로 사용해보세요.',
+      '변환, 압축, 전자 서명, 등 전체 Freeconvert 도구를 무제한으로 사용해보세요.',
     'home.trial.cta': '시작하기',
     // PDF 편집 페이지
     'edit.title': 'PDF Editor',

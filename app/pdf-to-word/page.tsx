@@ -110,7 +110,9 @@ export default function PdfToWordPage() {
 
         const fileBuffer = await selectedFile.arrayBuffer();
         // @ts-ignore - getDocument 타입 추론 이슈 회피
-        const loadingTask = pdfjs.getDocument({ data: new Uint8Array(fileBuffer) });
+        const loadingTask = pdfjs.getDocument({
+          data: new Uint8Array(fileBuffer),
+        });
         const pdf = await loadingTask.promise;
 
         const pageTexts: string[] = [];
@@ -135,12 +137,15 @@ export default function PdfToWordPage() {
         const { Document, Packer, Paragraph } = docx as any;
 
         // 내용이 없으면 안내 문구라도 포함
-        const safeText = extractedText && extractedText.trim().length > 0
-          ? extractedText
-          : '이 문서는 PDF에서 텍스트를 추출하여 변환한 결과입니다. (레이아웃/이미지는 포함되지 않을 수 있습니다)';
+        const safeText =
+          extractedText && extractedText.trim().length > 0
+            ? extractedText
+            : '이 문서는 PDF에서 텍스트를 추출하여 변환한 결과입니다. (레이아웃/이미지는 포함되지 않을 수 있습니다)';
 
         // 긴 텍스트를 문단 단위로 분해하여 구성
-        const paragraphNodes = safeText.split(/\n+/).map((line: string) => new Paragraph(line));
+        const paragraphNodes = safeText
+          .split(/\n+/)
+          .map((line: string) => new Paragraph(line));
 
         const doc = new Document({
           sections: [
@@ -158,14 +163,18 @@ export default function PdfToWordPage() {
         setConvertedFile(convertedBlob);
         return;
       } catch (docxErr) {
-        console.warn('DOCX 생성 실패, .doc(HTML) 폴백으로 진행합니다.', docxErr);
+        console.warn(
+          'DOCX 생성 실패, .doc(HTML) 폴백으로 진행합니다.',
+          docxErr
+        );
       }
 
       // 3) 폴백: Word에서 열 수 있는 HTML 기반 .doc 생성
       //    - 최소한 Word에서 열리는 유효한 문서로 제공하여 "손상된 파일" 오류 방지
-      const safeHtmlContent = extractedText && extractedText.trim().length > 0
-        ? extractedText
-        : '변환 모듈이 설치되어 있지 않아 텍스트 추출 없이 생성된 문서입니다.';
+      const safeHtmlContent =
+        extractedText && extractedText.trim().length > 0
+          ? extractedText
+          : '변환 모듈이 설치되어 있지 않아 텍스트 추출 없이 생성된 문서입니다.';
       const htmlDoc = `<!DOCTYPE html><html><head><meta charset="utf-8"><title>Converted</title></head><body><pre>${
         // HTML 이스케이프
         safeHtmlContent
@@ -193,10 +202,13 @@ export default function PdfToWordPage() {
     // MIME 타입에 따라 적절한 확장자 결정
     // - DOCX: application/vnd.openxmlformats-officedocument.wordprocessingml.document
     // - DOC (HTML 기반): application/msword
-    const isDocx = convertedFile.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+    const isDocx =
+      convertedFile.type ===
+      'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
     const preferredExt = isDocx ? '.docx' : '.doc';
     const baseName = selectedFile.name.replace(/\.(pdf)$/i, '');
-    const safeName = baseName && baseName.trim().length > 0 ? baseName : 'converted';
+    const safeName =
+      baseName && baseName.trim().length > 0 ? baseName : 'converted';
     a.download = `${safeName}${preferredExt}`;
     document.body.appendChild(a);
     a.click();
@@ -279,7 +291,9 @@ export default function PdfToWordPage() {
               <div className='flex items-center gap-3'>
                 <FileText className='h-5 w-5 text-primary' />
                 <div>
-                  <p className='font-medium text-gray-900'>{selectedFile.name}</p>
+                  <p className='font-medium text-gray-900'>
+                    {selectedFile.name}
+                  </p>
                   <p className='text-sm text-gray-500'>
                     {formatFileSize(selectedFile.size)}
                   </p>
@@ -435,9 +449,9 @@ export default function PdfToWordPage() {
               </h3>
             </div>
             <p className='text-sm text-gray-600'>
-              Mac, Windows, Linux는 물론 iOS, Android에서도 문제없이 PDF를 Word로
-              변환할 수 있습니다. 오프라인에서도 변환하려면 데스크톱 앱을 사용해
-              보세요.
+              Mac, Windows, Linux는 물론 iOS, Android에서도 문제없이 PDF를
+              Word로 변환할 수 있습니다. 오프라인에서도 변환하려면 데스크톱 앱을
+              사용해 보세요.
             </p>
           </div>
           <div className='rounded-xl border border-gray-200 bg-white p-6'>
@@ -463,7 +477,7 @@ export default function PdfToWordPage() {
             <p className='text-sm text-gray-600'>
               OCR(광학 문자 인식) 기술을 통해 스캔된 PDF에서도 텍스트를 손쉽게
               추출할 수 있습니다. 몇 초 만에 편집 가능한 Word 문서로 변환하고,
-              7일 무료 체험으로 모든 고급 PDF 도구를 이용해 보세요.
+              무료 체험으로 모든 고급 PDF 도구를 이용해 보세요.
             </p>
           </div>
         </div>
@@ -528,9 +542,10 @@ export default function PdfToWordPage() {
                 한글 PDF 변환 무료로 가능한가요?
               </h3>
               <p className='text-sm text-gray-700'>
-                네! Freeconvert의 PDF to Word 변환 도구는 누구나 무료로 사용할 수
-                있습니다. Pro 버전을 사용하면 무제한 변환과 30가지 이상의 추가
-                도구를 이용할 수 있어요. 7일 무료 체험 후 언제든지 취소 가능합니다.
+                네! Freeconvert의 PDF to Word 변환 도구는 누구나 무료로 사용할
+                수 있습니다. Pro 버전을 사용하면 무제한 변환과 30가지 이상의
+                추가 도구를 이용할 수 있어요. 7일 무료 체험 후 언제든지 취소
+                가능합니다.
               </p>
             </div>
             <div className='rounded-lg border border-gray-200 bg-gray-50 p-6'>
@@ -539,7 +554,8 @@ export default function PdfToWordPage() {
               </h3>
               <p className='text-sm text-gray-700'>
                 물론입니다! PDF를 Word(DOC, DOCX), Excel(XLS, XLSX),
-                PowerPoint(PPT, PPTX), 이미지 형식 등으로 쉽게 변환할 수 있습니다.
+                PowerPoint(PPT, PPTX), 이미지 형식 등으로 쉽게 변환할 수
+                있습니다.
               </p>
             </div>
             <div className='rounded-lg border border-gray-200 bg-gray-50 p-6'>
@@ -557,8 +573,8 @@ export default function PdfToWordPage() {
                 모바일에서도 변환할 수 있나요?
               </h3>
               <p className='text-sm text-gray-700'>
-                Freeconvert 모바일 앱을 사용하면 오프라인에서도 PDF 변환을 포함한
-                모든 기능을 사용할 수 있습니다. iOS 및 Android에서 무료로
+                Freeconvert 모바일 앱을 사용하면 오프라인에서도 PDF 변환을
+                포함한 모든 기능을 사용할 수 있습니다. iOS 및 Android에서 무료로
                 제공됩니다.
               </p>
             </div>
@@ -578,9 +594,9 @@ export default function PdfToWordPage() {
                 스캔한 PDF도 Word로 변환할 수 있나요?
               </h3>
               <p className='text-sm text-gray-700'>
-                네! Freeconvert Pro의 OCR 기능을 이용하면 스캔된 PDF에서 텍스트를
-                인식해 편집 가능한 Word 문서로 변환할 수 있습니다. OCR을 포함한
-                30개 이상의 PDF 도구를 7일간 무료로 체험해 보세요.
+                네! Freeconvert Pro의 OCR 기능을 이용하면 스캔된 PDF에서
+                텍스트를 인식해 편집 가능한 Word 문서로 변환할 수 있습니다.
+                OCR을 포함한 30개 이상의 PDF 도구를 7일간 무료로 체험해 보세요.
               </p>
             </div>
           </div>
@@ -589,8 +605,3 @@ export default function PdfToWordPage() {
     </div>
   );
 }
-
-
-
-
-

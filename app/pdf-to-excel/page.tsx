@@ -109,7 +109,9 @@ export default function PdfToExcelPage() {
 
         const fileBuffer = await selectedFile.arrayBuffer();
         // @ts-ignore
-        const loadingTask = pdfjs.getDocument({ data: new Uint8Array(fileBuffer) });
+        const loadingTask = pdfjs.getDocument({
+          data: new Uint8Array(fileBuffer),
+        });
         const pdf = await loadingTask.promise;
 
         const pageTexts: string[] = [];
@@ -128,9 +130,12 @@ export default function PdfToExcelPage() {
       }
 
       // 텍스트를 간단한 행 단위 데이터로 구성 (고급 표 인식 아님)
-      const lines: string[] = (extractedText && extractedText.trim().length > 0)
-        ? extractedText.split(/\r?\n+/)
-        : ['이 문서는 PDF에서 텍스트를 추출하여 생성되었습니다. (표/레이아웃은 포함되지 않을 수 있습니다)'];
+      const lines: string[] =
+        extractedText && extractedText.trim().length > 0
+          ? extractedText.split(/\r?\n+/)
+          : [
+              '이 문서는 PDF에서 텍스트를 추출하여 생성되었습니다. (표/레이아웃은 포함되지 않을 수 있습니다)',
+            ];
 
       // 2) SheetJS(xlsx)로 유효한 XLSX 생성 시도
       try {
@@ -175,10 +180,13 @@ export default function PdfToExcelPage() {
     const a = document.createElement('a');
     a.href = url;
     // MIME 타입에 따라 적절한 확장자 결정
-    const isXlsx = convertedFile.type === 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+    const isXlsx =
+      convertedFile.type ===
+      'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
     const preferredExt = isXlsx ? '.xlsx' : '.csv';
     const baseName = selectedFile.name.replace(/\.(pdf)$/i, '');
-    const safeName = baseName && baseName.trim().length > 0 ? baseName : 'converted';
+    const safeName =
+      baseName && baseName.trim().length > 0 ? baseName : 'converted';
     a.download = `${safeName}${preferredExt}`;
     document.body.appendChild(a);
     a.click();
@@ -448,7 +456,7 @@ export default function PdfToExcelPage() {
             <p className='text-sm text-gray-600'>
               OCR(광학 문자 인식) 기술을 통해 스캔된 PDF에서도 표와 데이터를
               손쉽게 추출할 수 있습니다. 몇 초 만에 편집 가능한 Excel 파일로
-              변환하고, 7일 무료 체험으로 모든 고급 PDF 도구를 이용해 보세요.
+              변환하고, 무료 체험으로 모든 고급 PDF 도구를 이용해 보세요.
             </p>
           </div>
         </div>
@@ -513,9 +521,9 @@ export default function PdfToExcelPage() {
                 PDF를 Excel로 변환하는 것이 무료인가요?
               </h3>
               <p className='text-sm text-gray-700'>
-                네! Freeconvert의 PDF to Excel 변환 도구는 누구나 무료로 사용할 수
-                있습니다. Pro 버전을 사용하면 무제한 변환과 30가지 이상의 추가
-                도구를 이용할 수 있어요. 7일 무료 체험 후 언제든지 취소
+                네! Freeconvert의 PDF to Excel 변환 도구는 누구나 무료로 사용할
+                수 있습니다. Pro 버전을 사용하면 무제한 변환과 30가지 이상의
+                추가 도구를 이용할 수 있어요. 7일 무료 체험 후 언제든지 취소
                 가능합니다.
               </p>
             </div>
@@ -543,8 +551,8 @@ export default function PdfToExcelPage() {
                 모바일에서도 변환할 수 있나요?
               </h3>
               <p className='text-sm text-gray-700'>
-                Freeconvert 모바일 앱을 사용하면 오프라인에서도 PDF 변환을 포함한
-                모든 기능을 사용할 수 있습니다. iOS 및 Android에서 무료로
+                Freeconvert 모바일 앱을 사용하면 오프라인에서도 PDF 변환을
+                포함한 모든 기능을 사용할 수 있습니다. iOS 및 Android에서 무료로
                 제공됩니다.
               </p>
             </div>
@@ -575,7 +583,3 @@ export default function PdfToExcelPage() {
     </div>
   );
 }
-
-
-
-

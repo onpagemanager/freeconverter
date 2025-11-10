@@ -101,7 +101,9 @@ export default function PdfToJpgPage() {
 
       // PDF 문서 로드
       // @ts-ignore - getDocument 타입 추론 이슈 회피
-      const loadingTask = pdfjs.getDocument({ data: new Uint8Array(fileBuffer) });
+      const loadingTask = pdfjs.getDocument({
+        data: new Uint8Array(fileBuffer),
+      });
       const pdf = await loadingTask.promise;
 
       const outputImages: Blob[] = [];
@@ -552,9 +554,9 @@ export default function PdfToJpgPage() {
                 PDF에서 개별 이미지를 추출할 수 있나요?
               </h3>
               <p className='text-sm text-gray-700'>
-                물론이죠! Freeconvert의 PDF JPG 변환 도구를 이용하면 문서에서 개별
-                이미지를 추출하여 별도의 파일로 손쉽게 저장할 수 있습니다. 이는
-                Pro 기능이지만, 7일 무료 체험판을 사용하면 체험해볼 수 있습니다.
+                물론이죠! Freeconvert의 PDF JPG 변환 도구를 이용하면 문서에서
+                개별 이미지를 추출하여 별도의 파일로 손쉽게 저장할 수 있습니다.
+                이는 Pro 기능이지만, 7일 판을 사용하면 체험해볼 수 있습니다.
                 무료 요금제를 사용하면 전체 PDF 페이지를 고품질 JPG로 변환할 수
                 있습니다. PDF를 업로드하고 원하는 형식을 선택해보세요.
               </p>
@@ -564,8 +566,9 @@ export default function PdfToJpgPage() {
                 PDF에서 변환할 때 이미지 품질이 영향을 받을까요?
               </h3>
               <p className='text-sm text-gray-700'>
-                아니요. Freeconvert의 PDF JPG 변환기는 고해상도 출력을 제공하므로
-                변환된 이미지는 또렷하고 선명하며 전문적인 품질을 유지합니다.
+                아니요. Freeconvert의 PDF JPG 변환기는 고해상도 출력을
+                제공하므로 변환된 이미지는 또렷하고 선명하며 전문적인 품질을
+                유지합니다.
               </p>
             </div>
             <div className='rounded-lg border border-gray-200 bg-gray-50 p-6'>
@@ -585,10 +588,10 @@ export default function PdfToJpgPage() {
                 PDF를 JPG로 변환할 때 데이터가 안전하게 보호되나요?
               </h3>
               <p className='text-sm text-gray-700'>
-                물론이죠! Freeconvert는 최신 TLS 암호화 기술을 사용하여 업로드 및
-                다운로드 과정에서 파일을 안전하게 보호합니다. 보안 서버에 파일을
-                저장하도록 선택하지 않는 한, 모든 문서는 처리 후 1시간 이내에
-                자동으로 서버에서 삭제됩니다.
+                물론이죠! Freeconvert는 최신 TLS 암호화 기술을 사용하여 업로드
+                및 다운로드 과정에서 파일을 안전하게 보호합니다. 보안 서버에
+                파일을 저장하도록 선택하지 않는 한, 모든 문서는 처리 후 1시간
+                이내에 자동으로 서버에서 삭제됩니다.
               </p>
             </div>
             <div className='rounded-lg border border-gray-200 bg-gray-50 p-6'>
@@ -597,12 +600,12 @@ export default function PdfToJpgPage() {
               </h3>
               <p className='text-sm text-gray-700'>
                 물론이죠! 무료 계정을 사용하면 모든 문서 유형을 변환할 수
-                있습니다. PDF부터 이미지와 MS Office 파일 변환까지, Freeconvert가
-                여러분을 도와드리겠습니다. 무료 요금제의 경우 몇 가지 제한
-                사항이 존재하지만, Pro를 구독하면 30가지가 넘는 PDF 도구를
-                비롯해 무제한 변환을 잠금 해제할 수 있습니다. 지금 7일 무료
-                체험판을 사용해보세요. 구독은 체험 기간 내에 언제든지 무료로
-                취소할 수 있습니다.
+                있습니다. PDF부터 이미지와 MS Office 파일 변환까지,
+                Freeconvert가 여러분을 도와드리겠습니다. 무료 요금제의 경우 몇
+                가지 제한 사항이 존재하지만, Pro를 구독하면 30가지가 넘는 PDF
+                도구를 비롯해 무제한 변환을 잠금 해제할 수 있습니다. 지금 7일
+                무료 체험판을 사용해보세요. 구독은 체험 기간 내에 언제든지
+                무료로 취소할 수 있습니다.
               </p>
             </div>
           </div>
