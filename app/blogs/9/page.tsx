@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'PDF에 배경 이미지를 추가하는 방법 | ImageConverter',
+  title: 'PDF에 배경 이미지를 추가하는 방법 | freeconvert',
   description:
     '평범한 PDF는 지루해 보일 수 있으며, 배경 이미지를 추가하면 개성, 브랜딩 및 세련미를 더할 수 있습니다. 몇 단계만으로 수행하는 방법을 알아보세요.',
   keywords: [
@@ -85,7 +85,7 @@ export default function Blog9() {
           </h2>
           <p className='text-gray-700 leading-relaxed mb-8'>
             브라우저에서 실행되며 필요한 곳에 정확하게 이미지를 배치할 수 있는
-            Smallpdf의 PDF 편집을 사용하여 PDF에 배경 이미지를 배치할 수
+            Freeconvert의 PDF 편집을 사용하여 PDF에 배경 이미지를 배치할 수
             있습니다.
           </p>
 
@@ -163,9 +163,9 @@ export default function Blog9() {
               때문입니다).
             </p>
             <p className='text-gray-700 leading-relaxed'>
-              Smallpdf의 PDF 편집을 사용하면 페이지에 이미지를 드롭하고 크기를
-              조정하며 레이아웃을 왜곡하지 않고 콘텐츠 뒤 또는 옆으로 이동할 수
-              있습니다.
+              Freeconvert의 PDF 편집을 사용하면 페이지에 이미지를 드롭하고
+              크기를 조정하며 레이아웃을 왜곡하지 않고 콘텐츠 뒤 또는 옆으로
+              이동할 수 있습니다.
             </p>
           </section>
 
@@ -236,7 +236,7 @@ export default function Blog9() {
             </div>
 
             <p className='mt-6 text-gray-700 leading-relaxed'>
-              Smallpdf로 차별화하세요.
+              Freeconvert로 차별화하세요.
             </p>
           </section>
 
@@ -253,7 +253,7 @@ export default function Blog9() {
                   1. PDF에 배경 이미지를 삽입하는 방법은?
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  Smallpdf의 PDF 편집을 사용하세요. 파일을 업로드하고 이미지
+                  Freeconvert의 PDF 편집을 사용하세요. 파일을 업로드하고 이미지
                   추가를 클릭하고 텍스트 뒤에 배치한 다음 새 버전을 저장합니다.
                 </p>
               </div>
@@ -276,7 +276,7 @@ export default function Blog9() {
                   3. 무료로 PDF의 배경을 변경하는 방법은?
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  온라인에서 Smallpdf의 PDF 편집을 무료로 사용할 수 있습니다.
+                  온라인에서 Freeconvert의 PDF 편집을 무료로 사용할 수 있습니다.
                   파일을 업로드하고 배경 이미지를 추가한 다음 업데이트된 PDF를
                   내보내기만 하면 됩니다.
                 </p>

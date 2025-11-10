@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '블로그 | ImageConverter',
+  title: '블로그 | freeconvert',
   description: '블로그 글',
 };
 
@@ -48,4 +48,3 @@ export default function Blog2() {
     </div>
   );
 }
-

@@ -127,7 +127,7 @@ export default function Header() {
             >
               <Image
                 src='/logo.png'
-                alt='ImageConverter'
+                alt='freeconvert'
                 width={200}
                 height={30}
                 className='h-10 w-auto'

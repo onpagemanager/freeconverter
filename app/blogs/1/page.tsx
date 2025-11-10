@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '인터랙티브 문서를 위해 PDF에 비디오 삽입하는 방법 | ImageConverter',
+  title: '인터랙티브 문서를 위해 PDF에 비디오 삽입하는 방법 | freeconvert',
   description:
     'Freeconvert의 PDF 편집으로 클릭 가능한 썸네일, 링크 또는 QR 코드를 추가하여 PDF에 비디오를 삽입하는 방법을 알아보세요.',
   keywords: [

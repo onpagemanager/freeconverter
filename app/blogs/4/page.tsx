@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '읽기 전용 PDF를 편집하는 방법 | ImageConverter',
+  title: '읽기 전용 PDF를 편집하는 방법 | freeconvert',
   description:
-    '제한을 제거한 다음 Smallpdf의 PDF 편집으로 텍스트, 이미지 또는 주석을 업데이트하여 읽기 전용 PDF를 편집 가능한 파일로 변환하는 방법을 알아보세요.',
+    '제한을 제거한 다음 Freeconvert의 PDF 편집으로 텍스트, 이미지 또는 주석을 업데이트하여 읽기 전용 PDF를 편집 가능한 파일로 변환하는 방법을 알아보세요.',
   keywords: [
     '읽기 전용 PDF 편집',
     'PDF 편집',
@@ -62,7 +62,7 @@ export default function Blog4() {
         {/* 소개 섹션 */}
         <div className='mb-8 rounded-lg bg-blue-50 border border-blue-200 p-6'>
           <p className='text-gray-700 leading-relaxed'>
-            제한을 제거한 다음 Smallpdf의 PDF 편집으로 텍스트, 이미지 또는
+            제한을 제거한 다음 Freeconvert의 PDF 편집으로 텍스트, 이미지 또는
             주석을 업데이트하여 읽기 전용 PDF를 편집 가능한 파일로 변환할 수
             있습니다.
           </p>
@@ -182,7 +182,7 @@ export default function Blog4() {
                   방법 1: 보안 제한 제거
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  PDF에 비밀번호 기반 제한이 있는 경우 Smallpdf의 잠금 해제
+                  PDF에 비밀번호 기반 제한이 있는 경우 Freeconvert의 잠금 해제
                   옵션을 사용하세요. 비밀번호를 입력하면 파일을 직접 편집할 수
                   있습니다.
                 </p>
@@ -314,9 +314,9 @@ export default function Blog4() {
                   4. Windows 또는 Mac에서 읽기 전용 PDF를 편집할 수 있나요?
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  예. Smallpdf는 모든 브라우저에서 작동하므로 추가 소프트웨어를
-                  설치하지 않고도 Windows와 Mac 모두에서 파일을 업로드, 잠금
-                  해제 및 편집할 수 있습니다.
+                  예. Freeconvert는 모든 브라우저에서 작동하므로 추가
+                  소프트웨어를 설치하지 않고도 Windows와 Mac 모두에서 파일을
+                  업로드, 잠금 해제 및 편집할 수 있습니다.
                 </p>
               </div>
 

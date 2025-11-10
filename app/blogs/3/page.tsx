@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '스캔한 PDF를 똑바로 정렬하는 방법 | ImageConverter',
+  title: '스캔한 PDF를 똑바로 정렬하는 방법 | freeconvert',
   description:
-    'Smallpdf로 비뚤어진 페이지를 정렬하고, 기울어진 스캔을 회전하고, 깔끔하게 저장하여 온라인에서 스캔한 PDF를 똑바로 정렬하는 방법을 알아보세요.',
+    'Freeconvert로 비뚤어진 페이지를 정렬하고, 기울어진 스캔을 회전하고, 깔끔하게 저장하여 온라인에서 스캔한 PDF를 똑바로 정렬하는 방법을 알아보세요.',
   keywords: [
     'PDF 정렬',
     '스캔 PDF 정렬',
@@ -62,7 +62,7 @@ export default function Blog3() {
         {/* 소개 섹션 */}
         <div className='mb-8 rounded-lg bg-blue-50 border border-blue-200 p-6'>
           <p className='text-gray-700 leading-relaxed'>
-            Smallpdf로 비뚤어진 페이지를 정렬하고, 기울어진 스캔을 회전하고,
+            Freeconvert로 비뚤어진 페이지를 정렬하고, 기울어진 스캔을 회전하고,
             깔끔하게 저장하여 온라인에서 스캔한 PDF를 똑바로 정렬할 수 있습니다.
           </p>
           <p className='mt-4 text-gray-700 leading-relaxed'>
@@ -83,8 +83,8 @@ export default function Blog3() {
             스캔한 PDF를 똑바로 정렬하는 방법: 단계별 가이드
           </h2>
           <p className='text-gray-700 leading-relaxed mb-8'>
-            Smallpdf를 사용하면 몇 초 만에 텍스트를 정렬하고 가독성을 향상시킬
-            수 있습니다. 방법은 다음과 같습니다.
+            Freeconvert를 사용하면 몇 초 만에 텍스트를 정렬하고 가독성을
+            향상시킬 수 있습니다. 방법은 다음과 같습니다.
           </p>
 
           {/* 1단계 */}
@@ -142,17 +142,17 @@ export default function Blog3() {
             </h2>
             <p className='text-gray-700 leading-relaxed mb-4'>
               비뚤어진 PDF는 데스크톱 문제만이 아닙니다. 모바일 스캔 앱도
-              페이지를 기울이는 경우가 많습니다. Smallpdf를 사용하면 휴대폰
+              페이지를 기울이는 경우가 많습니다. Freeconvert를 사용하면 휴대폰
               브라우저에서 PDF 페이지를 똑바로 정렬할 수 있습니다.
             </p>
             <p className='text-gray-700 leading-relaxed mb-4'>
               파일을 업로드하고 정렬되도록 회전한 다음 저장하세요. 추가 앱이
               필요하지 않지만 앱에서 작업하는 것을 선호하는 경우 더 나은 탐색을
-              위해 Smallpdf 앱을 다운로드할 수 있습니다.
+              위해 Freeconvert 앱을 다운로드할 수 있습니다.
             </p>
             <p className='text-gray-700 leading-relaxed'>
               업데이트된 버전을 편안하게 읽으려면 페이지가 수정된 후 깨끗한 보기
-              환경을 제공하는 Smallpdf의 PDF 리더를 사용해 보세요.
+              환경을 제공하는 Freeconvert의 PDF 리더를 사용해 보세요.
             </p>
           </section>
 
@@ -208,9 +208,9 @@ export default function Blog3() {
                   1. Word로 변환 및 편집
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  Smallpdf의 PDF를 Word로 변환하여 파일을 변환한 다음 Word에서
-                  정렬을 조정한 후 PDF로 다시 내보낼 수 있습니다. 이 방법은 이미
-                  텍스트를 편집할 계획이라면 유용합니다.
+                  Freeconvert의 PDF를 Word로 변환하여 파일을 변환한 다음
+                  Word에서 정렬을 조정한 후 PDF로 다시 내보낼 수 있습니다. 이
+                  방법은 이미 텍스트를 편집할 계획이라면 유용합니다.
                 </p>
               </div>
 
@@ -221,7 +221,7 @@ export default function Blog3() {
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
                   스캔한 PDF가 제한되어 있는 경우 먼저 잠금을 해제해야 할 수
-                  있습니다. Smallpdf의 PDF 잠금 해제를 사용하여 조정하기 전에
+                  있습니다. Freeconvert의 PDF 잠금 해제를 사용하여 조정하기 전에
                   제한을 제거하세요.
                 </p>
               </div>
@@ -232,7 +232,7 @@ export default function Blog3() {
                   3. 리더에서 페이지 회전
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  때로는 간단한 회전만 필요합니다. Smallpdf의 PDF 리더를
+                  때로는 간단한 회전만 필요합니다. Freeconvert의 PDF 리더를
                   사용하면 올바른 각도로 문서를 보고, 회전하고, 다시 저장할 수
                   있습니다.
                 </p>
@@ -260,7 +260,7 @@ export default function Blog3() {
                   하나요?
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  Smallpdf의 PDF 편집에 업로드하고 비뚤어진 페이지를 제자리로
+                  Freeconvert의 PDF 편집에 업로드하고 비뚤어진 페이지를 제자리로
                   회전한 다음 업데이트된 파일을 저장하세요.
                 </p>
               </div>
@@ -318,8 +318,9 @@ export default function Blog3() {
                   무엇인가요?
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  Smallpdf를 사용하면 됩니다. 파일을 업로드하고 페이지를 정렬한
-                  다음 파일을 다운로드하세요. 무료이고 빠르고 사용하기 쉽습니다.
+                  Freeconvert를 사용하면 됩니다. 파일을 업로드하고 페이지를
+                  정렬한 다음 파일을 다운로드하세요. 무료이고 빠르고 사용하기
+                  쉽습니다.
                 </p>
               </div>
             </div>

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'PDF 문서에 날짜를 삽입하는 방법 | ImageConverter',
+  title: 'PDF 문서에 날짜를 삽입하는 방법 | freeconvert',
   description:
-    'Smallpdf의 PDF 편집으로 PDF 문서에 날짜를 삽입할 수 있어 오늘 날짜나 필요한 날짜를 쉽게 추가하는 방법을 알아보세요.',
+    'Freeconvert의 PDF 편집으로 PDF 문서에 날짜를 삽입할 수 있어 오늘 날짜나 필요한 날짜를 쉽게 추가하는 방법을 알아보세요.',
   keywords: [
     'PDF 날짜 삽입',
     'PDF 날짜 추가',
@@ -62,8 +62,8 @@ export default function Blog6() {
         {/* 소개 섹션 */}
         <div className='mb-8 rounded-lg bg-blue-50 border border-blue-200 p-6'>
           <p className='text-gray-700 leading-relaxed'>
-            Smallpdf의 PDF 편집으로 PDF 문서에 날짜를 삽입할 수 있어 오늘 날짜나
-            필요한 날짜를 쉽게 추가할 수 있습니다.
+            Freeconvert의 PDF 편집으로 PDF 문서에 날짜를 삽입할 수 있어 오늘
+            날짜나 필요한 날짜를 쉽게 추가할 수 있습니다.
           </p>
           <p className='mt-4 text-gray-700 leading-relaxed'>
             때때로 PDF에 날짜 필드가 없거나 서명된 양식, 송장 또는 계약서를
@@ -82,14 +82,14 @@ export default function Blog6() {
             PDF 문서에 날짜를 삽입하는 방법
           </h2>
           <p className='text-gray-700 leading-relaxed mb-8'>
-            날짜를 추가하는 가장 신뢰할 수 있는 방법은 Smallpdf의 PDF
+            날짜를 추가하는 가장 신뢰할 수 있는 방법은 Freeconvert의 PDF
             편집입니다.
           </p>
 
           {/* 1단계 */}
           <section className='mb-8'>
             <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-              1단계: Smallpdf의 PDF 편집 열기
+              1단계: Freeconvert의 PDF 편집 열기
             </h3>
             <p className='text-gray-700 leading-relaxed'>
               PDF 편집으로 이동합니다.
@@ -302,8 +302,8 @@ export default function Blog6() {
                   1. PDF 문서에 날짜를 삽입하는 방법은?
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  파일을 Smallpdf의 PDF 편집에 업로드하고 텍스트 도구를 선택한
-                  다음 올바른 위치에 날짜를 입력합니다.
+                  파일을 Freeconvert의 PDF 편집에 업로드하고 텍스트 도구를
+                  선택한 다음 올바른 위치에 날짜를 입력합니다.
                 </p>
               </div>
 
@@ -324,7 +324,7 @@ export default function Blog6() {
                   3. 문서에 날짜를 넣는 방법은?
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  PDF에서는 Smallpdf의 PDF 편집을 사용하여 날짜를 입력합니다.
+                  PDF에서는 Freeconvert의 PDF 편집을 사용하여 날짜를 입력합니다.
                   Word에서는 삽입 → 스마트 칩 → 날짜로 이동하여 PDF로 변환하기
                   전에 추가합니다.
                 </p>

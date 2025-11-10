@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'PDF 문서에 투명 스탬프를 추가하는 방법 | ImageConverter',
+  title: 'PDF 문서에 투명 스탬프를 추가하는 방법 | freeconvert',
   description:
     '투명한 배경이 있는 PNG 이미지를 필요한 곳에 배치하여 모든 PDF에 투명 스탬프를 추가하는 방법을 알아보세요.',
   keywords: [
@@ -105,7 +105,7 @@ export default function Blog5() {
             </h3>
             <p className='text-gray-700 leading-relaxed mb-4'>
               장치에서 업로드하거나 Google 드라이브, Dropbox 또는 OneDrive에서
-              가져옵니다. 이러한 클라우드 옵션은 빠른 편집을 위해 Smallpdf와
+              가져옵니다. 이러한 클라우드 옵션은 빠른 편집을 위해 Freeconvert와
               원활하게 연결됩니다.
             </p>
           </section>

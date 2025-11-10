@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '여백 없이 PDF 무테두리 인쇄하는 방법 | ImageConverter',
+  title: '여백 없이 PDF 무테두리 인쇄하는 방법 | freeconvert',
   description:
-    'Smallpdf에서 전체 출혈(full-bleed) 페이지를 준비한 다음 프린터의 무테두리 모드를 사용하여 가장자리까지 인쇄하는 방법을 알아보세요.',
+    'Freeconvert에서 전체 출혈(full-bleed) 페이지를 준비한 다음 프린터의 무테두리 모드를 사용하여 가장자리까지 인쇄하는 방법을 알아보세요.',
   keywords: [
     'PDF 무테두리 인쇄',
     '여백 없이 PDF 인쇄',
@@ -62,7 +62,7 @@ export default function Blog10() {
         {/* 소개 섹션 */}
         <div className='mb-8 rounded-lg bg-blue-50 border border-blue-200 p-6'>
           <p className='text-gray-700 leading-relaxed'>
-            Smallpdf에서 전체 출혈(full-bleed) 페이지를 준비한 다음 프린터의
+            Freeconvert에서 전체 출혈(full-bleed) 페이지를 준비한 다음 프린터의
             무테두리 모드를 사용하여 가장자리까지 인쇄할 수 있습니다.
           </p>
           <p className='mt-4 text-gray-700 leading-relaxed'>
@@ -72,8 +72,8 @@ export default function Blog10() {
             무테두리 설정을 지원해야 합니다.
           </p>
           <p className='mt-4 text-gray-700 leading-relaxed'>
-            Smallpdf에서의 준비 작업과 정확한 인쇄 설정을 안내해 드리겠습니다.
-            그러면 페이지가 흰색 가장자리 없이 깨끗하게 나옵니다.
+            Freeconvert에서의 준비 작업과 정확한 인쇄 설정을 안내해
+            드리겠습니다. 그러면 페이지가 흰색 가장자리 없이 깨끗하게 나옵니다.
           </p>
         </div>
 

@@ -409,7 +409,7 @@ export default function Footer() {
               {/* 로고 - 다양한 색상의 사각형들 */}
               <Image
                 src='/logo.png'
-                alt='ImageConverter'
+                alt='freeconvert'
                 width={200}
                 height={30}
                 className='h-10 w-auto'

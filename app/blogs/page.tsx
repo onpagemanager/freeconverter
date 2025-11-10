@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '블로그 | ImageConverter',
+  title: '블로그 | freeconvert',
   description: 'PDF 변환 및 편집에 관한 유용한 블로그 글들을 확인하세요.',
 };
 
