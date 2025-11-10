@@ -84,9 +84,9 @@ export default function Blog11() {
             PDF에 서명 이미지를 추가하는 방법: 단계별
           </h2>
           <p className='text-gray-700 leading-relaxed mb-8'>
-            서명 이미지를 삽입하는 가장 간단한 방법은 Smallpdf의 PDF 편집입니다.
-            브라우저에서 작동하며 장치 또는 클라우드 스토리지에서 업로드를
-            지원합니다.
+            서명 이미지를 삽입하는 가장 간단한 방법은 Freeconvert의 PDF
+            편집입니다. 브라우저에서 작동하며 장치 또는 클라우드 스토리지에서
+            업로드를 지원합니다.
           </p>
           <p className='text-gray-700 leading-relaxed mb-8'>
             방법은 다음과 같습니다.
@@ -182,7 +182,7 @@ export default function Blog11() {
               </li>
             </ul>
             <p className='text-gray-700 leading-relaxed'>
-              <strong>팁 →</strong> Smallpdf 모바일 앱을 사용하면 서명을 직접
+              <strong>팁 →</strong> Freeconvert 모바일 앱을 사용하면 서명을 직접
               캡처하고 자를 수 있으며 즉시 사용 가능한 이미지로 저장할 수
               있습니다.
             </p>
@@ -293,9 +293,9 @@ export default function Blog11() {
               무료로 PDF에 서명 이미지를 추가할 수 있나요?
             </h2>
             <p className='text-gray-700 leading-relaxed mb-4'>
-              예. Smallpdf를 사용하면 무료로 온라인에서 PDF에 이미지를 삽입할 수
-              있습니다. 업로드하고, 서명을 추가하고, 서명된 문서를 즉시 저장할
-              수 있습니다.
+              예. Freeconvert를 사용하면 무료로 온라인에서 PDF에 이미지를 삽입할
+              수 있습니다. 업로드하고, 서명을 추가하고, 서명된 문서를 즉시
+              저장할 수 있습니다.
             </p>
             <p className='text-gray-700 leading-relaxed'>
               재사용 가능한 서명이나 다른 사람이 서명하도록 파일 보내기와 같은
@@ -316,7 +316,7 @@ export default function Blog11() {
                   1. PDF에 서명 사진을 추가할 수 있나요?
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  예. PDF를 Smallpdf의 PDF 편집에 업로드하고 이미지 추가를
+                  예. PDF를 Freeconvert의 PDF 편집에 업로드하고 이미지 추가를
                   선택한 다음 서명 사진을 파일의 아무 곳에나 배치하세요.
                 </p>
               </div>
@@ -338,9 +338,9 @@ export default function Blog11() {
                   3. 온라인에서 PDF에 서명 이미지를 추가하는 방법은?
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  Smallpdf의 PDF 편집으로 이동하여 문서를 업로드하고 저장된 서명
-                  이미지를 삽입합니다. 그런 다음 서명된 파일을 다운로드하거나
-                  공유할 수 있습니다.
+                  Freeconvert의 PDF 편집으로 이동하여 문서를 업로드하고 저장된
+                  서명 이미지를 삽입합니다. 그런 다음 서명된 파일을
+                  다운로드하거나 공유할 수 있습니다.
                 </p>
               </div>
 
@@ -350,9 +350,9 @@ export default function Blog11() {
                   4. 무료로 PDF에 서명 이미지를 추가하는 방법은?
                 </h3>
                 <p className='text-gray-700 leading-relaxed'>
-                  Smallpdf를 사용하면 무료로 서명 이미지를 추가할 수 있습니다.
-                  브라우저에서 PDF 편집을 사용하고 업데이트된 파일을 저장하기만
-                  하면 됩니다.
+                  Freeconvert를 사용하면 무료로 서명 이미지를 추가할 수
+                  있습니다. 브라우저에서 PDF 편집을 사용하고 업데이트된 파일을
+                  저장하기만 하면 됩니다.
                 </p>
               </div>
             </div>

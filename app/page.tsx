@@ -83,12 +83,6 @@ export default function Home() {
             >
               {t('home.hero.cta.start')}
             </Link>
-            <Link
-              href='/convert'
-              className='rounded-full border-2 border-gray-300 bg-white px-8 py-4 text-lg font-semibold text-gray-700 transition-colors hover:border-gray-400 hover:bg-gray-50'
-            >
-              {t('home.hero.cta.viewAll')}
-            </Link>
           </div>
         </div>
       </section>
@@ -169,7 +163,7 @@ export default function Home() {
 
       {/* Simple Tasks Section */}
       <section className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8'>
-        <div className='rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 p-12 text-center text-white'>
+        <div className='rounded-2xl bg-primary p-12 text-center text-white'>
           <h2 className='mb-4 text-3xl font-bold'>{t('home.simple.title')}</h2>
           <p className='mx-auto max-w-3xl text-lg text-blue-50'>
             {t('home.simple.description')}
@@ -380,7 +374,7 @@ export default function Home() {
 
       {/* Trial Section */}
       <section className='mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8'>
-        <div className='rounded-2xl bg-gradient-to-r from-blue-600 to-blue-700 p-12 text-center text-white'>
+        <div className='rounded-2xl bg-primary p-12 text-center text-white'>
           <h2 className='mb-4 text-3xl font-bold'>{t('home.trial.title')}</h2>
           <p className='mx-auto mb-8 max-w-2xl text-lg text-blue-50'>
             {t('home.trial.description')}

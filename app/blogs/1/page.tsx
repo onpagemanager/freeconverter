@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: '인터랙티브 문서를 위해 PDF에 비디오 삽입하는 방법 | ImageConverter',
   description:
-    'Smallpdf의 PDF 편집으로 클릭 가능한 썸네일, 링크 또는 QR 코드를 추가하여 PDF에 비디오를 삽입하는 방법을 알아보세요.',
+    'Freeconvert의 PDF 편집으로 클릭 가능한 썸네일, 링크 또는 QR 코드를 추가하여 PDF에 비디오를 삽입하는 방법을 알아보세요.',
   keywords: [
     'PDF 비디오 삽입',
     'PDF 비디오 추가',
@@ -62,7 +62,7 @@ export default function Blog1() {
         {/* 소개 섹션 */}
         <div className='mb-8 rounded-lg bg-blue-50 border border-blue-200 p-6'>
           <p className='text-gray-700 leading-relaxed'>
-            Smallpdf의 PDF 편집으로 클릭 가능한 썸네일, 링크 또는 QR 코드를
+            Freeconvert의 PDF 편집으로 클릭 가능한 썸네일, 링크 또는 QR 코드를
             추가한 다음 업데이트된 파일을 저장하고 공유하여 PDF에 비디오를
             삽입할 수 있습니다.
           </p>
@@ -107,7 +107,7 @@ export default function Blog1() {
           {/* 2단계 */}
           <section className='mb-8'>
             <h3 className='text-2xl font-bold text-gray-900 mb-4'>
-              2단계: Smallpdf의 PDF 편집 열기
+              2단계: Freeconvert의 PDF 편집 열기
             </h3>
             <p className='text-gray-700 leading-relaxed'>
               PDF 편집으로 이동합니다.

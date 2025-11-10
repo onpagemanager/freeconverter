@@ -68,7 +68,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.relatedKeywords.keyword1': '이미지변환사이트',
     'home.relatedKeywords.keyword2': '핸드폰사진 변환',
     'home.relatedKeywords.keyword3': 'PDF 변환',
-    'home.hero.cta.start': '무료 시작',
+    'home.hero.cta.start': '시작하기',
     'home.hero.cta.viewAll': '전체 PDF 도구 살펴보기',
     'home.popular.title': '가장 인기있는 PDF 도구',
     'home.popular.description':
@@ -111,7 +111,7 @@ const translations: Record<Language, Record<string, string>> = {
     'home.feature.allInOne.title': '모든 문서 관리를 한 곳에서',
     'home.feature.allInOne.description':
       '더는 여러 가지 앱을 넘나들며 작업하실 필요가 없습니다! Freeconvert 웹 플랫폼에서 직접 작업하면 여러 기기에서 파일을 저장, 관리, 공유하는 데 소요되는 시간을 절약하실 수 있습니다.',
-    'home.feature.allInOne.cta': '무료 시작',
+    'home.feature.allInOne.cta': '시작하기',
     'home.mobile.title': '모바일에서 이용하기',
     'home.mobile.description':
       '언제 어디서나 Freeconvert 모바일 앱으로 연결된 모든 기기에서 스캔한 문서 PDF 만들기, 문서 정리, 파일 공유 작업을 해 보세요.',
@@ -138,8 +138,8 @@ const translations: Record<Language, Record<string, string>> = {
       'Freeconvert는 사용자 안전을 최우선으로 생각합니다. 당사는 ISO/IEC 27001 인증을 받았으며 GDPR, CCPA, nFADP를 준수합니다.',
     'home.trial.title': 'Freeconvert 무료 체험',
     'home.trial.description':
-      '무료 시작하고 변환, 압축, 전자 서명, 등 전체 Freeconvert 도구를 무제한으로 사용해보세요.',
-    'home.trial.cta': '무료 시작',
+      '시작하기하고 변환, 압축, 전자 서명, 등 전체 Freeconvert 도구를 무제한으로 사용해보세요.',
+    'home.trial.cta': '시작하기',
     // PDF 편집 페이지
     'edit.title': 'PDF Editor',
     'edit.description':
@@ -159,7 +159,7 @@ const translations: Record<Language, Record<string, string>> = {
     'edit.download': '다운로드',
     'edit.proFeature.title': 'Pro 기능 안내',
     'edit.proFeature.description':
-      '기존 텍스트 편집 기능은 Pro 계정에서만 사용할 수 있습니다. 무료 시작하고 모든 기능을 사용해보세요.',
+      '기존 텍스트 편집 기능은 Pro 계정에서만 사용할 수 있습니다. 시작하기하고 모든 기능을 사용해보세요.',
     'edit.proFeature.later': '나중에',
     'edit.proFeature.trial': '7일 무료 체험',
     'edit.section.title': 'PDF 편집 - 간편하게',
