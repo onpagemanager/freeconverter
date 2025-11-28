@@ -189,3 +189,4 @@ export const config = {
 - `.env.local` 파일은 `.gitignore`에 포함되어 있어야 합니다
 
 
+
