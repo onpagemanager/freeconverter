@@ -3,6 +3,15 @@ import Link from 'next/link';
 
 import { supabase } from '@/lib/supabase';
 import type { BlogNotice, Homepage } from './reference';
+import {
+  Pagination,
+  PaginationContent,
+  PaginationEllipsis,
+  PaginationItem,
+  PaginationLink,
+  PaginationNext,
+  PaginationPrevious,
+} from '@/components/ui/pagination';
 
 export const metadata: Metadata = {
   title: '블로그 | freeconvert',
@@ -38,14 +47,35 @@ const createExcerpt = (content: string, maxLength = 180) => {
   return `${trimmed.slice(0, maxLength)}...`;
 };
 
-// Supabase에서 공지 데이터를 서버에서 바로 로드
-const fetchBlogNotices = async () => {
+// 페이지당 표시할 블로그 글 개수
+const POSTS_PER_PAGE = 10;
+
+// Supabase에서 공지 데이터를 서버에서 바로 로드 (페이지네이션 지원)
+const fetchBlogNotices = async (page: number = 1) => {
   try {
+    // 전체 개수 조회
+    const { count, error: countError } = await supabase
+      .from('blog_notices')
+      .select('*', { count: 'exact', head: true });
+
+    if (countError) {
+      throw new Error(countError.message);
+    }
+
+    const totalCount = count ?? 0;
+    const totalPages = Math.ceil(totalCount / POSTS_PER_PAGE);
+    
+    // 유효한 페이지 번호 확인
+    const currentPage = Math.max(1, Math.min(page, totalPages || 1));
+    const offset = (currentPage - 1) * POSTS_PER_PAGE;
+
+    // 페이지네이션된 데이터 조회
     const { data, error } = await supabase
       .from('blog_notices')
       .select('id, title, content, category, homepage, created_at, highlight')
       .order('highlight', { ascending: false })
-      .order('created_at', { ascending: false });
+      .order('created_at', { ascending: false })
+      .range(offset, offset + POSTS_PER_PAGE - 1);
 
     if (error) {
       throw new Error(error.message);
@@ -53,20 +83,146 @@ const fetchBlogNotices = async () => {
 
     return {
       notices: (data ?? []) as BlogNotice[],
+      totalCount,
+      totalPages,
+      currentPage,
       errorMessage: null,
     };
   } catch (error) {
     console.error('[blogs] 데이터를 불러오지 못했습니다.', error);
     return {
       notices: [] as BlogNotice[],
+      totalCount: 0,
+      totalPages: 0,
+      currentPage: 1,
       errorMessage:
         '블로그 데이터를 불러오지 못했습니다. 잠시 후 다시 시도해주세요.',
     };
   }
 };
 
-export default async function Blogs() {
-  const { notices, errorMessage } = await fetchBlogNotices();
+// 페이지네이션 컴포넌트
+function BlogPagination({
+  currentPage,
+  totalPages,
+}: {
+  currentPage: number;
+  totalPages: number;
+}) {
+  // 페이지 번호 배열 생성 (최대 5개 페이지 번호 표시)
+  const getPageNumbers = () => {
+    const pages: (number | 'ellipsis')[] = [];
+    const maxVisible = 5; // 최대 표시할 페이지 번호 개수
+
+    if (totalPages <= maxVisible) {
+      // 전체 페이지가 5개 이하인 경우 모두 표시
+      for (let i = 1; i <= totalPages; i++) {
+        pages.push(i);
+      }
+    } else {
+      // 현재 페이지 주변 페이지 번호 표시
+      if (currentPage <= 3) {
+        // 앞부분: 1, 2, 3, 4, ..., 마지막
+        for (let i = 1; i <= 4; i++) {
+          pages.push(i);
+        }
+        pages.push('ellipsis');
+        pages.push(totalPages);
+      } else if (currentPage >= totalPages - 2) {
+        // 뒷부분: 1, ..., 마지막-3, 마지막-2, 마지막-1, 마지막
+        pages.push(1);
+        pages.push('ellipsis');
+        for (let i = totalPages - 3; i <= totalPages; i++) {
+          pages.push(i);
+        }
+      } else {
+        // 중간: 1, ..., 현재-1, 현재, 현재+1, ..., 마지막
+        pages.push(1);
+        pages.push('ellipsis');
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
+          pages.push(i);
+        }
+        pages.push('ellipsis');
+        pages.push(totalPages);
+      }
+    }
+
+    return pages;
+  };
+
+  const pageNumbers = getPageNumbers();
+
+  if (totalPages <= 1) {
+    return null; // 페이지가 1개 이하면 페이지네이션 숨김
+  }
+
+  return (
+    <Pagination className='mt-8'>
+      <PaginationContent>
+        {/* 이전 페이지 버튼 */}
+        <PaginationItem>
+          {currentPage > 1 ? (
+            <PaginationPrevious
+              href={`/blogs?page=${currentPage - 1}`}
+              aria-disabled={currentPage === 1}
+            />
+          ) : (
+            <PaginationPrevious href='#' aria-disabled className='pointer-events-none opacity-50' />
+          )}
+        </PaginationItem>
+
+        {/* 페이지 번호 버튼들 */}
+        {pageNumbers.map((page, index) => {
+          if (page === 'ellipsis') {
+            return (
+              <PaginationItem key={`ellipsis-${index}`}>
+                <PaginationEllipsis />
+              </PaginationItem>
+            );
+          }
+
+          return (
+            <PaginationItem key={page}>
+              <PaginationLink
+                href={`/blogs?page=${page}`}
+                isActive={currentPage === page}
+              >
+                {page}
+              </PaginationLink>
+            </PaginationItem>
+          );
+        })}
+
+        {/* 다음 페이지 버튼 */}
+        <PaginationItem>
+          {currentPage < totalPages ? (
+            <PaginationNext
+              href={`/blogs?page=${currentPage + 1}`}
+              aria-disabled={currentPage === totalPages}
+            />
+          ) : (
+            <PaginationNext href='#' aria-disabled className='pointer-events-none opacity-50' />
+          )}
+        </PaginationItem>
+      </PaginationContent>
+    </Pagination>
+  );
+}
+
+interface BlogsPageProps {
+  searchParams: Promise<{ page?: string }>;
+}
+
+export default async function Blogs({ searchParams }: BlogsPageProps) {
+  // URL 쿼리 파라미터에서 페이지 번호 추출
+  const params = await searchParams;
+  const page = params.page ? parseInt(params.page, 10) : 1;
+  
+  // 유효하지 않은 페이지 번호 처리
+  const validPage = isNaN(page) || page < 1 ? 1 : page;
+
+  const { notices, totalCount, totalPages, currentPage, errorMessage } =
+    await fetchBlogNotices(validPage);
 
   return (
     <div className='min-h-screen bg-linear-to-b from-blue-50 to-white'>
@@ -89,8 +245,17 @@ export default async function Blogs() {
           <div className='flex items-center justify-between mb-2'>
             <h1 className='text-3xl font-bold text-gray-900'>블로그</h1>
             <span className='text-sm text-gray-500'>
-              블로그글갯수{' '}
-              <span className='font-semibold'>{notices.length}</span>
+              전체{' '}
+              <span className='font-semibold'>{totalCount}</span>개
+              {totalPages > 1 && (
+                <>
+                  {' '}
+                  · 페이지{' '}
+                  <span className='font-semibold'>
+                    {currentPage} / {totalPages}
+                  </span>
+                </>
+              )}
             </span>
           </div>
           <p className='text-gray-600'>
@@ -184,6 +349,11 @@ export default async function Blogs() {
                   아직 작성된 블로그 글이 없습니다.
                 </p>
               </div>
+            )}
+
+            {/* 페이지네이션 UI */}
+            {totalPages > 1 && (
+              <BlogPagination currentPage={currentPage} totalPages={totalPages} />
             )}
           </>
         )}
