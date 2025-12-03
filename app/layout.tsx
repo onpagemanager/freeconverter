@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     siteName: 'freeconvert',
     title: 'freeconvert | 무료 이미지 변환기',
     description:
-      '모든파일을 무료 변환합니다. JPG, PNG, PDF 등 모든 파일 형식을 무료로 변환할 수 있는 온라인 변환기입니다.',
+      '모든파일 무료 변환합니다. JPG, PNG, PDF 등 모든 파일 형식을 무료로 변환할 수 있는 온라인 변환기입니다.',
   },
   twitter: {
     card: 'summary_large_image',
