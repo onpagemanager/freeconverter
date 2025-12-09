@@ -137,18 +137,21 @@ export default function PdfToExcelPage() {
               '이 문서는 PDF에서 텍스트를 추출하여 생성되었습니다. (표/레이아웃은 포함되지 않을 수 있습니다)',
             ];
 
-      // 2) SheetJS(xlsx)로 유효한 XLSX 생성 시도
+      // 2) ExcelJS로 유효한 XLSX 생성 시도
       try {
-        const XLSX = await import('xlsx');
+        const ExcelJS = await import('exceljs');
+        // 워크북 생성
+        const workbook = new ExcelJS.Workbook();
+        const worksheet = workbook.addWorksheet('Extracted');
+        
         // AOA(배열의 배열)로 단일 열에 줄 단위 텍스트 배치
         const sheetData: string[][] = lines.map(line => [line]);
-        const worksheet = (XLSX as any).utils.aoa_to_sheet(sheetData);
-        const workbook = (XLSX as any).utils.book_new();
-        (XLSX as any).utils.book_append_sheet(workbook, worksheet, 'Extracted');
-        const xlsxArrayBuffer: ArrayBuffer = (XLSX as any).write(workbook, {
-          bookType: 'xlsx',
-          type: 'array',
-        });
+        
+        // 데이터를 워크시트에 추가
+        worksheet.addRows(sheetData);
+        
+        // Excel 파일을 ArrayBuffer로 변환
+        const xlsxArrayBuffer = await workbook.xlsx.writeBuffer();
         const xlsxBlob = new Blob([xlsxArrayBuffer], {
           type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
         });

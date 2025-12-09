@@ -91,17 +91,13 @@ export default function ExcelToPdfPage() {
     setConvertedFile(null);
 
     try {
-      // 1) xlsx 라이브러리로 Excel 파일 읽기
-      const XLSX = await import('xlsx');
+      // 1) ExcelJS 라이브러리로 Excel 파일 읽기
+      const ExcelJS = await import('exceljs');
       const fileBuffer = await selectedFile.arrayBuffer();
       
-      // Excel 파일을 워크북으로 읽기 (한글 인코딩 보존을 위한 옵션 추가)
-      const workbook = XLSX.read(fileBuffer, { 
-        type: 'array',
-        cellDates: false, // 날짜 변환 비활성화
-        raw: true, // 원시 값 사용 (한글 인코딩 보존)
-        codepage: 65001 // UTF-8 명시
-      });
+      // Excel 파일을 워크북으로 읽기 (한글 인코딩 보존)
+      const workbook = new ExcelJS.Workbook();
+      await workbook.xlsx.load(fileBuffer);
       
       // 2) jsPDF로 PDF 생성
       // @ts-ignore - jsPDF 타입 정의 문제 (named export 지원)
@@ -177,7 +173,7 @@ export default function ExcelToPdfPage() {
       let yPosition = margin;
 
       // 각 시트를 PDF에 추가
-      workbook.SheetNames.forEach((sheetName, sheetIndex) => {
+      workbook.worksheets.forEach((worksheet, sheetIndex) => {
         if (sheetIndex > 0) {
           // 첫 번째 시트가 아니면 새 페이지 추가
           pdf.addPage();
@@ -188,7 +184,7 @@ export default function ExcelToPdfPage() {
           yPosition = margin;
         }
 
-        const worksheet = workbook.Sheets[sheetName];
+        const sheetName = worksheet.name;
         
         // 시트 이름을 제목으로 추가
         pdf.setFontSize(14);
@@ -197,66 +193,67 @@ export default function ExcelToPdfPage() {
         yPosition += 10;
 
         // Excel 데이터를 배열로 변환 (한글 인코딩 보존)
-        // 원시 셀 값을 직접 읽어서 인코딩 문제 방지
-        const range = XLSX.utils.decode_range(worksheet['!ref'] || 'A1');
         const jsonData: any[][] = [];
         
-        // 시트 범위를 순회하며 원시 셀 값 읽기
-        for (let rowIndex = range.s.r; rowIndex <= range.e.r; rowIndex++) {
-          const row: any[] = [];
-          for (let colIndex = range.s.c; colIndex <= range.e.c; colIndex++) {
-            const cellAddress = XLSX.utils.encode_cell({ r: rowIndex, c: colIndex });
-            const cell = worksheet[cellAddress];
+        // 워크시트의 각 행을 순회하며 데이터 읽기
+        let maxColumnCount = 0;
+        const tempData: any[][] = [];
+        
+        worksheet.eachRow((row, rowNumber) => {
+          const rowData: any[] = [];
+          
+          // 각 셀의 값을 읽어서 배열에 추가 (빈 셀도 포함)
+          row.eachCell({ includeEmpty: true }, (cell, colNumber) => {
+            let cellValue: any = '';
             
-            if (cell) {
-              // 셀 값이 있는 경우 - 원시 값 사용
-              let cellValue = cell.v;
-              
-              // 날짜인 경우 문자열로 변환
-              if (cell.t === 'd' && cellValue instanceof Date) {
-                cellValue = cellValue.toISOString().split('T')[0];
+            // 셀 타입에 따라 값 추출
+            if (cell.value !== null && cell.value !== undefined) {
+              // 날짜인 경우
+              if (cell.value instanceof Date) {
+                cellValue = cell.value.toISOString().split('T')[0];
               }
-              // 숫자인 경우 그대로 사용
-              else if (cell.t === 'n') {
-                cellValue = cellValue;
+              // 숫자인 경우
+              else if (typeof cell.value === 'number') {
+                cellValue = cell.value;
               }
-              // 문자열인 경우 원시 값 사용 (한글 보존)
-              else if (cell.t === 's') {
-                cellValue = String(cellValue);
+              // 문자열인 경우 (한글 보존)
+              else if (typeof cell.value === 'string') {
+                cellValue = cell.value;
               }
-              // 공식 결과 사용
-              else if (cell.t === 'e') {
-                cellValue = cell.w || '';
+              // 객체인 경우 (공식 결과 등)
+              else if (typeof cell.value === 'object' && 'text' in cell.value) {
+                cellValue = String((cell.value as any).text);
               }
               // 기타 타입
               else {
-                cellValue = String(cellValue || '');
+                cellValue = String(cell.value);
               }
-              
-              row.push(cellValue);
-            } else {
-              // 빈 셀
-              row.push('');
             }
-          }
+            
+            // 셀 값을 배열에 추가 (인덱스는 0부터 시작하므로 colNumber - 1)
+            rowData[colNumber - 1] = cellValue;
+          });
           
-          // 빈 행이 아닌 경우에만 추가 (모든 셀이 비어있지 않은 행)
-          if (row.some(cell => cell !== '' && cell !== null && cell !== undefined)) {
-            jsonData.push(row);
+          // 최대 열 개수 업데이트
+          maxColumnCount = Math.max(maxColumnCount, rowData.length);
+          
+          // 빈 행이 아닌 경우에만 추가
+          if (rowData.some(cell => cell !== '' && cell !== null && cell !== undefined)) {
+            tempData.push(rowData);
           }
-        }
+        });
+        
+        // 모든 행의 열 개수를 동일하게 맞추기
+        tempData.forEach(row => {
+          while (row.length < maxColumnCount) {
+            row.push('');
+          }
+          jsonData.push(row);
+        });
         
         // 빈 시트 처리
         if (jsonData.length === 0) {
-          // sheet_to_json을 폴백으로 사용
-          const fallbackData = XLSX.utils.sheet_to_json(worksheet, { 
-            header: 1,
-            defval: '',
-            raw: true // 원시 값 사용
-          });
-          if (fallbackData.length > 0) {
-            jsonData.push(...(fallbackData as any[][]));
-          }
+          jsonData.push(['(빈 시트)']);
         }
 
         if (jsonData.length === 0) {
