@@ -595,10 +595,43 @@ export default function Footer() {
                 </a>
               </div>
 
+              {/* 연락처 정보 */}
+              <div className='mb-4 text-sm text-gray-600'>
+                <p className='mb-2'>
+                  <strong className='text-gray-900'>
+                    {language === 'ko' ? '연락처' : 'Contact'}
+                  </strong>
+                </p>
+                <p className='mb-1'>
+                  {language === 'ko' ? '이메일' : 'Email'}:{' '}
+                  <a
+                    href='mailto:support@freeconvert.io'
+                    className='text-primary hover:underline'
+                  >
+                    support@freeconvert.io
+                  </a>
+                </p>
+                <p>
+                  {language === 'ko' ? '개인정보 문의' : 'Privacy Inquiry'}:{' '}
+                  <a
+                    href='mailto:privacy@freeconvert.io'
+                    className='text-primary hover:underline'
+                  >
+                    privacy@freeconvert.io
+                  </a>
+                </p>
+              </div>
+
               {/* 저작권 및 법률 링크 */}
               <div className='flex w-full flex-col sm:flex-row sm:items-center sm:justify-between gap-4 text-sm text-gray-600'>
-                <p>&copy; 2025 Freeconvert</p>
+                <p>&copy; 2025 Freeconvert. {language === 'ko' ? '모든 권리 보유.' : 'All rights reserved.'}</p>
                 <div className='flex flex-wrap gap-4'>
+                  <Link
+                    href='/about'
+                    className='hover:text-gray-900 transition-colors'
+                  >
+                    {language === 'ko' ? '회사 소개' : 'About'}
+                  </Link>
                   <Link
                     href='/privacy'
                     className='hover:text-gray-900 transition-colors'
@@ -610,12 +643,6 @@ export default function Footer() {
                     className='hover:text-gray-900 transition-colors'
                   >
                     {language === 'ko' ? '이용약관' : 'Terms of Service'}
-                  </Link>
-                  <Link
-                    href='/imprint'
-                    className='hover:text-gray-900 transition-colors'
-                  >
-                    {language === 'ko' ? '발행 정보' : 'Imprint'}
                   </Link>
                   <Link
                     href='/contact'

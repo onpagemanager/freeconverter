@@ -225,7 +225,7 @@ export default function PrivacyPage() {
                   <strong>개인정보 보호책임자</strong>
                 </p>
                 <p className='text-sm text-gray-600'>
-                  이메일: privacy@yourdomain.com
+                  이메일: privacy@freeconvert.io
                 </p>
                 <p className='text-sm text-gray-600'>
                   ※ 개인정보 보호 담당부서로 연결됩니다.
@@ -268,20 +268,84 @@ export default function PrivacyPage() {
               </p>
               <ul className='mb-4 list-disc list-inside space-y-2 text-gray-700 leading-relaxed'>
                 <li>
-                  쿠키의 사용 목적: 이용자의 접속 빈도나 방문 시간 등을 분석하여
-                  서비스 개선에 활용
+                  <strong>쿠키의 사용 목적:</strong>
+                  <ul className='ml-6 mt-2 list-disc list-inside space-y-1'>
+                    <li>이용자의 접속 빈도나 방문 시간 등을 분석하여 서비스 개선에 활용</li>
+                    <li>서비스 이용 패턴 분석 및 통계 수집</li>
+                    <li>광고 게재 및 맞춤형 광고 제공</li>
+                    <li>서비스 이용 편의성 향상</li>
+                  </ul>
                 </li>
                 <li>
-                  쿠키의 설치·운영 및 거부: 이용자는 쿠키 설치에 대한 선택권을
-                  가지고 있으며, 브라우저 설정을 통해 쿠키 허용, 쿠키 차단 등의
-                  설정을 할 수 있습니다.
+                  <strong>쿠키의 종류:</strong>
+                  <ul className='ml-6 mt-2 list-disc list-inside space-y-1'>
+                    <li>필수 쿠키: 서비스 제공을 위해 반드시 필요한 쿠키</li>
+                    <li>분석 쿠키: 서비스 이용 통계 분석을 위한 쿠키</li>
+                    <li>광고 쿠키: 맞춤형 광고 제공을 위한 쿠키</li>
+                  </ul>
+                </li>
+                <li>
+                  <strong>제3자 쿠키:</strong> 서비스는 Google AdSense 등 제3자 광고 서비스를 이용할 수 있으며, 이러한 서비스 제공자들이 자체 쿠키를 사용할 수 있습니다. Google의 쿠키 사용에 대한 자세한 내용은{' '}
+                  <a
+                    href='https://policies.google.com/privacy'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-primary hover:underline'
+                  >
+                    Google 개인정보처리방침
+                  </a>
+                  을 참고하시기 바랍니다.
+                </li>
+                <li>
+                  <strong>쿠키의 설치·운영 및 거부:</strong> 이용자는 쿠키 설치에 대한 선택권을 가지고 있으며, 브라우저 설정을 통해 쿠키 허용, 쿠키 차단 등의 설정을 할 수 있습니다. 다만, 쿠키 설치를 거부할 경우 일부 서비스 이용에 어려움이 있을 수 있습니다.
                 </li>
               </ul>
             </section>
 
             <section className='mb-8'>
               <h2 className='mb-4 text-2xl font-bold text-gray-900'>
-                11. 개인정보 처리방침 변경
+                11. 광고 및 제3자 서비스
+              </h2>
+              <p className='mb-4 text-gray-700 leading-relaxed'>
+                서비스는 무료 서비스 제공을 위해 제3자 광고 서비스를 이용할 수 있습니다.
+              </p>
+              <ul className='mb-4 list-disc list-inside space-y-2 text-gray-700 leading-relaxed'>
+                <li>
+                  <strong>Google AdSense:</strong> 서비스는 Google AdSense를 통해 광고를 게재할 수 있습니다. Google AdSense는 이용자의 관심사에 맞는 광고를 제공하기 위해 쿠키 및 기타 기술을 사용할 수 있습니다.
+                </li>
+                <li>
+                  <strong>광고 개인화:</strong> Google은 이용자의 이전 방문 기록 및 기타 웹사이트 방문 기록을 바탕으로 맞춤형 광고를 제공할 수 있습니다. 이용자는{' '}
+                  <a
+                    href='https://adssettings.google.com'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-primary hover:underline'
+                  >
+                    Google 광고 설정
+                  </a>
+                  에서 광고 개인화를 비활성화할 수 있습니다.
+                </li>
+                <li>
+                  <strong>제3자 서비스의 개인정보 처리:</strong> 제3자 광고 서비스 제공자가 수집하는 정보는 해당 제공자의 개인정보처리방침에 따라 관리됩니다. Google의 개인정보 처리에 대한 자세한 내용은{' '}
+                  <a
+                    href='https://policies.google.com/privacy'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-primary hover:underline'
+                  >
+                    Google 개인정보처리방침
+                  </a>
+                  을 참고하시기 바랍니다.
+                </li>
+                <li>
+                  <strong>광고 차단:</strong> 이용자는 광고 차단 소프트웨어를 사용하여 광고를 차단할 수 있습니다. 다만, 이는 서비스의 일부 기능에 영향을 줄 수 있습니다.
+                </li>
+              </ul>
+            </section>
+
+            <section className='mb-8'>
+              <h2 className='mb-4 text-2xl font-bold text-gray-900'>
+                12. 개인정보 처리방침 변경
               </h2>
               <p className='mb-4 text-gray-700 leading-relaxed'>
                 이 개인정보처리방침은 {new Date().toLocaleDateString('ko-KR')}부터

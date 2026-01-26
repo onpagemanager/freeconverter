@@ -240,10 +240,117 @@ export default function PdfToWordPage() {
           <h1 className='mb-4 text-5xl font-bold text-gray-900'>
             PDF를 Word로 변환
           </h1>
-          <p className='text-lg text-gray-600'>
+          <p className='text-lg text-gray-600 mb-4'>
             PDF 파일을 편집 가능한 Word 문서로 빠르게 변환하세요. 가입이나
             워터마크 없이 누구나 무료로 사용할 수 있습니다.
           </p>
+          <p className='text-base text-gray-500 max-w-3xl mx-auto'>
+            PDF 문서를 Microsoft Word 형식으로 변환하여 텍스트 편집, 서식 변경,
+            내용 수정 등을 자유롭게 할 수 있습니다. 스캔된 PDF도 OCR 기술을 통해
+            편집 가능한 Word 문서로 변환할 수 있습니다.
+          </p>
+        </div>
+
+        {/* 상세 설명 섹션 */}
+        <div className='mb-12 rounded-2xl border border-gray-200 bg-white p-8'>
+          <h2 className='mb-6 text-2xl font-bold text-gray-900'>
+            PDF를 Word로 변환하는 이유
+          </h2>
+          <div className='grid gap-6 md:grid-cols-2'>
+            <div>
+              <h3 className='mb-3 text-lg font-semibold text-gray-900'>
+                텍스트 편집 가능
+              </h3>
+              <p className='text-gray-600 leading-relaxed'>
+                PDF는 읽기 전용 형식이지만, Word로 변환하면 텍스트를 자유롭게
+                편집하고 수정할 수 있습니다. 오타 수정, 내용 추가, 문장 재구성 등
+                모든 편집 작업이 가능합니다.
+              </p>
+            </div>
+            <div>
+              <h3 className='mb-3 text-lg font-semibold text-gray-900'>
+                서식 및 레이아웃 유지
+              </h3>
+              <p className='text-gray-600 leading-relaxed'>
+                고급 변환 기술을 사용하여 원본 PDF의 폰트, 색상, 표, 이미지 등 모든
+                서식 요소를 그대로 유지합니다. 변환 후에도 원본과 동일한 모습을
+                확인할 수 있습니다.
+              </p>
+            </div>
+            <div>
+              <h3 className='mb-3 text-lg font-semibold text-gray-900'>
+                협업 및 공유 용이
+              </h3>
+              <p className='text-gray-600 leading-relaxed'>
+                Word 문서는 Microsoft Office와 호환되며, 팀원들과 쉽게 공유하고
+                협업할 수 있습니다. 댓글 추가, 변경 사항 추적 등 Word의 다양한
+                기능을 활용할 수 있습니다.
+              </p>
+            </div>
+            <div>
+              <h3 className='mb-3 text-lg font-semibold text-gray-900'>
+                재사용 및 재편집
+              </h3>
+              <p className='text-gray-600 leading-relaxed'>
+                PDF의 내용을 다른 문서에 재사용하거나, 일부만 추출하여 새로운
+                문서를 만들 때 유용합니다. Word 형식으로 변환하면 자유롭게 재편집이
+                가능합니다.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* 사용 방법 섹션 */}
+        <div className='mb-12 rounded-2xl border border-gray-200 bg-gray-50 p-8'>
+          <h2 className='mb-6 text-2xl font-bold text-gray-900 text-center'>
+            PDF를 Word로 변환하는 방법
+          </h2>
+          <div className='grid gap-6 md:grid-cols-4'>
+            <div className='text-center'>
+              <div className='mb-4 flex justify-center'>
+                <div className='flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white text-xl font-bold'>
+                  1
+                </div>
+              </div>
+              <h3 className='mb-2 font-semibold text-gray-900'>PDF 파일 업로드</h3>
+              <p className='text-sm text-gray-600'>
+                변환할 PDF 파일을 선택하거나 드래그 앤 드롭으로 추가합니다.
+              </p>
+            </div>
+            <div className='text-center'>
+              <div className='mb-4 flex justify-center'>
+                <div className='flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white text-xl font-bold'>
+                  2
+                </div>
+              </div>
+              <h3 className='mb-2 font-semibold text-gray-900'>자동 변환 처리</h3>
+              <p className='text-sm text-gray-600'>
+                업로드된 PDF 파일이 자동으로 Word 형식으로 변환됩니다.
+              </p>
+            </div>
+            <div className='text-center'>
+              <div className='mb-4 flex justify-center'>
+                <div className='flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white text-xl font-bold'>
+                  3
+                </div>
+              </div>
+              <h3 className='mb-2 font-semibold text-gray-900'>변환 결과 확인</h3>
+              <p className='text-sm text-gray-600'>
+                변환된 Word 문서의 미리보기를 확인하고 품질을 검토합니다.
+              </p>
+            </div>
+            <div className='text-center'>
+              <div className='mb-4 flex justify-center'>
+                <div className='flex h-12 w-12 items-center justify-center rounded-full bg-primary text-white text-xl font-bold'>
+                  4
+                </div>
+              </div>
+              <h3 className='mb-2 font-semibold text-gray-900'>Word 파일 다운로드</h3>
+              <p className='text-sm text-gray-600'>
+                변환된 Word 문서를 다운로드하여 사용합니다.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* 파일 업로드 영역 */}

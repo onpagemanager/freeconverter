@@ -32,18 +32,37 @@ export const metadata: Metadata = {
     '핸드폰사진 변환',
     'PDF 변환',
   ],
+  authors: [{ name: 'freeconvert' }],
+  publisher: 'freeconvert',
+  creator: 'freeconvert',
+  metadataBase: new URL('https://freeconvert.io'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     type: 'website',
     siteName: 'freeconvert',
     title: 'freeconvert | 무료 이미지 변환기',
     description:
       '모든파일 무료 변환합니다. JPG, PNG, PDF 등 모든 파일 형식을 무료로 변환할 수 있는 온라인 변환기입니다.',
+    url: 'https://freeconvert.io',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'freeconvert | 무료 이미지 변환기',
     description:
       '모든파일을 무료 변환합니다. JPG, PNG, PDF 등 모든 파일 형식을 무료로 변환할 수 있는 온라인 변환기입니다.',
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 };
 
@@ -56,6 +75,13 @@ const organizationSchema = {
   logo: 'https://freeconvert.io/logo.png', // 로고 이미지 URL (최소 112x112px 권장)
   description:
     '모든파일을 무료 변환합니다. JPG, PNG, PDF 등 모든 파일 형식을 무료로 변환할 수 있는 온라인 변환기입니다.',
+  email: 'support@freeconvert.io', // 연락처 이메일
+  contactPoint: {
+    '@type': 'ContactPoint',
+    email: 'support@freeconvert.io',
+    contactType: 'customer service',
+    availableLanguage: ['Korean', 'English'],
+  },
   sameAs: [
     // 소셜 미디어 링크가 있다면 추가
     // 예: 'https://www.facebook.com/freeconvert',
