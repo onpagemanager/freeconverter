@@ -96,6 +96,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang='ko' suppressHydrationWarning>
+      <head>
+        <script
+          src='https://analytics.ahrefs.com/analytics.js'
+          data-key='0f+WY1MQl23gGT119dGdbg'
+          async
+        ></script>
+      </head>
       <body className={notoSansKr.className} suppressHydrationWarning>
         {/* Organization 스키마 마크업 */}
         <script
