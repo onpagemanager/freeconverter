@@ -1,9 +1,27 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import type { Metadata } from 'next';
+import { getBaseUrl, getOgImageUrl } from '@/lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: '이용약관 | 무료 이미지 변환기',
   description: '무료 이미지 변환기 서비스 이용약관입니다.',
+  alternates: {
+    canonical: `${getBaseUrl()}/terms`,
+  },
+  openGraph: {
+    title: '이용약관 | freeconvert',
+    description: '무료 이미지 변환기 서비스 이용약관입니다.',
+    url: `${getBaseUrl()}/terms`,
+    images: [
+      {
+        url: getOgImageUrl(),
+        width: 1200,
+        height: 630,
+        alt: 'freeconvert 이용약관',
+      },
+    ],
+  },
 };
 
 export default function TermsPage() {

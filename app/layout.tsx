@@ -46,6 +46,14 @@ export const metadata: Metadata = {
     description:
       '모든파일 무료 변환합니다. JPG, PNG, PDF 등 모든 파일 형식을 무료로 변환할 수 있는 온라인 변환기입니다.',
     url: 'https://freeconvert.io',
+    images: [
+      {
+        url: 'https://freeconvert.io/logo.png',
+        width: 1200,
+        height: 630,
+        alt: 'freeconvert 로고',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',

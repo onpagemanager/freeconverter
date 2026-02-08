@@ -12,10 +12,27 @@ import {
   PaginationNext,
   PaginationPrevious,
 } from '@/components/ui/pagination';
+import { getBaseUrl, getOgImageUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: '블로그 | freeconvert',
   description: 'PDF 변환 및 편집에 관한 유용한 블로그 글들을 확인하세요.',
+  alternates: {
+    canonical: `${getBaseUrl()}/blogs`,
+  },
+  openGraph: {
+    title: '블로그 | freeconvert',
+    description: 'PDF 변환 및 편집에 관한 유용한 블로그 글들을 확인하세요.',
+    url: `${getBaseUrl()}/blogs`,
+    images: [
+      {
+        url: getOgImageUrl(),
+        width: 1200,
+        height: 630,
+        alt: 'freeconvert 블로그',
+      },
+    ],
+  },
 };
 
 export const revalidate = 60;

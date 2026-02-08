@@ -1,9 +1,18 @@
 import Link from 'next/link';
 import { Home, Search, FileText } from 'lucide-react';
+import type { Metadata } from 'next';
+import { getBaseUrl } from '@/lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: '404 - 페이지를 찾을 수 없습니다 | 무료 이미지 변환기',
   description: '요청하신 페이지를 찾을 수 없습니다.',
+  alternates: {
+    canonical: `${getBaseUrl()}/404`,
+  },
+  robots: {
+    index: false, // 404 페이지는 인덱싱하지 않음
+    follow: false,
+  },
 };
 
 export default function NotFound() {

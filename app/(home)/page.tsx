@@ -48,7 +48,7 @@ export default function Home() {
     {
       name: t('home.popular.tool.sign.name'),
       description: t('home.popular.tool.sign.description'),
-      href: '/sign',
+      href: '/edit', // PDF 편집 페이지로 연결 (서명 기능 포함)
       icon: Signature,
     },
     {
@@ -210,7 +210,7 @@ export default function Home() {
               {t('home.feature.digitalSignature.description')}
             </p>
             <Link
-              href='/sign'
+              href='/edit'
               className='inline-flex items-center gap-2 text-primary hover:text-blue-700'
             >
               <span className='font-medium'>

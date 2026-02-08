@@ -19,6 +19,23 @@ const nextConfig: NextConfig = {
     }
     return config;
   },
+
+  // 성능 최적화 설정
+  compress: true, // gzip 압축 활성화
+  poweredByHeader: false, // X-Powered-By 헤더 제거 (보안 및 성능)
+  
+  // 이미지 최적화 설정
+  images: {
+    formats: ['image/avif', 'image/webp'], // 최신 이미지 형식 지원
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60, // 이미지 캐시 TTL (초)
+  },
+
+  // 실험적 기능 (성능 개선)
+  experimental: {
+    optimizeCss: true, // CSS 최적화
+  },
 };
 
 export default nextConfig;

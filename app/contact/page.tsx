@@ -1,10 +1,29 @@
 import Link from 'next/link';
 import { ArrowLeft, Mail, MessageSquare, Clock } from 'lucide-react';
+import type { Metadata } from 'next';
+import { getBaseUrl, getOgImageUrl } from '@/lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: '문의하기 | freeconvert',
   description:
     'freeconvert 서비스에 대한 문의사항이나 제안사항을 보내주세요. 빠르고 친절하게 답변드리겠습니다.',
+  alternates: {
+    canonical: `${getBaseUrl()}/contact`,
+  },
+  openGraph: {
+    title: '문의하기 | freeconvert',
+    description:
+      'freeconvert 서비스에 대한 문의사항이나 제안사항을 보내주세요. 빠르고 친절하게 답변드리겠습니다.',
+    url: `${getBaseUrl()}/contact`,
+    images: [
+      {
+        url: getOgImageUrl(),
+        width: 1200,
+        height: 630,
+        alt: 'freeconvert 문의하기',
+      },
+    ],
+  },
 };
 
 export default function ContactPage() {

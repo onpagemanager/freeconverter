@@ -1,9 +1,27 @@
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
+import type { Metadata } from 'next';
+import { getBaseUrl, getOgImageUrl } from '@/lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: '개인정보처리방침 | 무료 이미지 변환기',
   description: '무료 이미지 변환기 서비스 개인정보처리방침입니다.',
+  alternates: {
+    canonical: `${getBaseUrl()}/privacy`,
+  },
+  openGraph: {
+    title: '개인정보처리방침 | freeconvert',
+    description: '무료 이미지 변환기 서비스 개인정보처리방침입니다.',
+    url: `${getBaseUrl()}/privacy`,
+    images: [
+      {
+        url: getOgImageUrl(),
+        width: 1200,
+        height: 630,
+        alt: 'freeconvert 개인정보처리방침',
+      },
+    ],
+  },
 };
 
 export default function PrivacyPage() {

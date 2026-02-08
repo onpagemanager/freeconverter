@@ -1,10 +1,29 @@
 import Link from 'next/link';
 import { ArrowLeft, Users, Target, Zap, Shield, Globe } from 'lucide-react';
+import type { Metadata } from 'next';
+import { getBaseUrl, getOgImageUrl } from '@/lib/seo';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: '회사 소개 | freeconvert',
   description:
     'freeconvert는 모든 파일 형식을 무료로 변환할 수 있는 온라인 변환기 서비스입니다. PDF, 이미지, 문서 변환을 쉽고 빠르게 제공합니다.',
+  alternates: {
+    canonical: `${getBaseUrl()}/about`,
+  },
+  openGraph: {
+    title: '회사 소개 | freeconvert',
+    description:
+      'freeconvert는 모든 파일 형식을 무료로 변환할 수 있는 온라인 변환기 서비스입니다. PDF, 이미지, 문서 변환을 쉽고 빠르게 제공합니다.',
+    url: `${getBaseUrl()}/about`,
+    images: [
+      {
+        url: getOgImageUrl(),
+        width: 1200,
+        height: 630,
+        alt: 'freeconvert 회사 소개',
+      },
+    ],
+  },
 };
 
 export default function AboutPage() {
