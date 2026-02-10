@@ -80,37 +80,40 @@ export default function Footer() {
             },
           ],
         },
-        {
-          name: language === 'ko' ? 'AI PDF' : 'AI PDF',
-          tools: [
-            {
-              name: language === 'ko' ? 'PDF와 채팅' : 'Chat with PDF',
-              href: '/chat-pdf',
-              icon: MessageSquare,
-              color: 'text-blue-500',
-            },
-            {
-              name:
-                language === 'ko' ? 'AI PDF 요약 도구' : 'AI PDF Summary Tool',
-              href: '/ai-summary',
-              icon: List,
-              color: 'text-blue-500',
-            },
-            {
-              name: language === 'ko' ? 'PDF 번역' : 'Translate PDF',
-              href: '/translate-pdf',
-              icon: Languages,
-              color: 'text-blue-500',
-            },
-            {
-              name:
-                language === 'ko' ? 'AI 문제 생성기' : 'AI Problem Generator',
-              href: '/ai-problem',
-              icon: HelpCircle,
-              color: 'text-blue-500',
-            },
-          ],
-        },
+        // TODO: 아래 AI 관련 기능은 아직 실제 페이지가 없으므로
+        // 404 에러를 방지하기 위해 링크를 잠시 숨깁니다.
+        // 추후 해당 기능이 구현되면 routes(app 디렉토리) 추가 후 복구하세요.
+        // {
+        //   name: language === 'ko' ? 'AI PDF' : 'AI PDF',
+        //   tools: [
+        //     {
+        //       name: language === 'ko' ? 'PDF와 채팅' : 'Chat with PDF',
+        //       href: '/chat-pdf',
+        //       icon: MessageSquare,
+        //       color: 'text-blue-500',
+        //     },
+        //     {
+        //       name:
+        //         language === 'ko' ? 'AI PDF 요약 도구' : 'AI PDF Summary Tool',
+        //       href: '/ai-summary',
+        //       icon: List,
+        //       color: 'text-blue-500',
+        //     },
+        //     {
+        //       name: language === 'ko' ? 'PDF 번역' : 'Translate PDF',
+        //       href: '/translate-pdf',
+        //       icon: Languages,
+        //       color: 'text-blue-500',
+        //     },
+        //     {
+        //       name:
+        //         language === 'ko' ? 'AI 문제 생성기' : 'AI Problem Generator',
+        //       href: '/ai-problem',
+        //       icon: HelpCircle,
+        //       color: 'text-blue-500',
+        //     },
+        //   ],
+        // },
       ],
     },
     {
@@ -149,12 +152,14 @@ export default function Footer() {
               icon: Grid3x3,
               color: 'text-purple-500',
             },
-            {
-              name: language === 'ko' ? 'PDF 정리' : 'Organize PDF',
-              href: '/organize',
-              icon: Grid3x3,
-              color: 'text-purple-500',
-            },
+            // TODO: Organize PDF 기능 페이지가 없어서 404 발생.
+            // 실제 페이지를 추가한 후 아래 항목을 다시 활성화하세요.
+            // {
+            //   name: language === 'ko' ? 'PDF 정리' : 'Organize PDF',
+            //   href: '/organize',
+            //   icon: Grid3x3,
+            //   color: 'text-purple-500',
+            // },
           ],
         },
       ],
@@ -177,49 +182,52 @@ export default function Footer() {
               icon: PenTool,
               color: 'text-teal-500',
             },
-            {
-              name: language === 'ko' ? 'PDF 리더' : 'PDF Reader',
-              href: '/reader',
-              icon: BookOpen,
-              color: 'text-teal-500',
-            },
-            {
-              name:
-                language === 'ko' ? '페이지 번호 매기기' : 'Add Page Numbers',
-              href: '/page-numbers',
-              icon: Hash,
-              color: 'text-teal-500',
-            },
-            {
-              name: language === 'ko' ? 'PDF 자르기' : 'Crop PDF',
-              href: '/crop',
-              icon: Crop,
-              color: 'text-teal-500',
-            },
-            {
-              name: language === 'ko' ? 'PDF 기밀 정보 삭제' : 'Redact PDF',
-              href: '/redact',
-              icon: EyeOff,
-              color: 'text-teal-500',
-            },
-            {
-              name: language === 'ko' ? '워터마크 PDF' : 'Watermark PDF',
-              href: '/watermark',
-              icon: User,
-              color: 'text-teal-500',
-            },
-            {
-              name: language === 'ko' ? 'PDF 양식 필러' : 'PDF Form Filler',
-              href: '/form-filler',
-              icon: FileCheck,
-              color: 'text-teal-500',
-            },
-            {
-              name: language === 'ko' ? 'PDF 공유하기' : 'Share PDF',
-              href: '/share',
-              icon: Share2,
-              color: 'text-teal-500',
-            },
+            // TODO: 아래 보기/편집 관련 기능들은 아직 구현된 페이지가 없어
+            // 모든 페이지에서 404를 유발하므로 숨깁니다.
+            // 구현이 완료되면 app 디렉토리에 페이지를 생성한 후 다시 노출하세요.
+            // {
+            //   name: language === 'ko' ? 'PDF 리더' : 'PDF Reader',
+            //   href: '/reader',
+            //   icon: BookOpen,
+            //   color: 'text-teal-500',
+            // },
+            // {
+            //   name:
+            //     language === 'ko' ? '페이지 번호 매기기' : 'Add Page Numbers',
+            //   href: '/page-numbers',
+            //   icon: Hash,
+            //   color: 'text-teal-500',
+            // },
+            // {
+            //   name: language === 'ko' ? 'PDF 자르기' : 'Crop PDF',
+            //   href: '/crop',
+            //   icon: Crop,
+            //   color: 'text-teal-500',
+            // },
+            // {
+            //   name: language === 'ko' ? 'PDF 기밀 정보 삭제' : 'Redact PDF',
+            //   href: '/redact',
+            //   icon: EyeOff,
+            //   color: 'text-teal-500',
+            // },
+            // {
+            //   name: language === 'ko' ? '워터마크 PDF' : 'Watermark PDF',
+            //   href: '/watermark',
+            //   icon: User,
+            //   color: 'text-teal-500',
+            // },
+            // {
+            //   name: language === 'ko' ? 'PDF 양식 필러' : 'PDF Form Filler',
+            //   href: '/form-filler',
+            //   icon: FileCheck,
+            //   color: 'text-teal-500',
+            // },
+            // {
+            //   name: language === 'ko' ? 'PDF 공유하기' : 'Share PDF',
+            //   href: '/share',
+            //   icon: Share2,
+            //   color: 'text-teal-500',
+            // },
           ],
         },
       ],
@@ -293,66 +301,69 @@ export default function Footer() {
         },
       ],
     },
-    {
-      // Column 5
-      categories: [
-        {
-          name: language === 'ko' ? '서명' : 'Sign',
-          tools: [
-            {
-              name: language === 'ko' ? 'PDF에 서명' : 'Sign PDF',
-              href: '/sign',
-              icon: Signature,
-              color: 'text-purple-500',
-              highlighted: true,
-            },
-            {
-              name:
-                language === 'ko'
-                  ? '서명 요청 (Sign.com)'
-                  : 'Request Signature (Sign.com)',
-              href: '/sign-request',
-              icon: PenTool,
-              color: 'text-yellow-500',
-            },
-          ],
-        },
-        {
-          name: language === 'ko' ? '더 보기' : 'More',
-          tools: [
-            {
-              name: language === 'ko' ? 'PDF 잠금해제' : 'Unlock PDF',
-              href: '/unlock',
-              icon: LockOpen,
-              color: 'text-red-500',
-            },
-            {
-              name: language === 'ko' ? 'PDF 암호 설정' : 'Protect PDF',
-              href: '/protect',
-              icon: Lock,
-              color: 'text-red-500',
-            },
-            {
-              name: language === 'ko' ? 'PDF 평면화' : 'Flatten PDF',
-              href: '/flatten',
-              icon: DownloadIcon,
-              color: 'text-red-500',
-            },
-          ],
-        },
-        {
-          name: language === 'ko' ? '스캔' : 'Scan',
-          tools: [
-            {
-              name: language === 'ko' ? 'PDF 스캐너' : 'PDF Scanner',
-              href: '/scanner',
-              icon: Camera,
-              color: 'text-blue-500',
-            },
-          ],
-        },
-      ],
-    },
+        // Column 5에 있던 서명/보안/스캔 관련 기능은
+        // 아직 구현된 페이지가 없어 모두 404를 발생시키므로 일단 비활성화합니다.
+        // 실제 기능 페이지가 추가된 후 다시 카테고리를 복구하세요.
+        // {
+        //   // Column 5
+        //   categories: [
+        //     {
+        //       name: language === 'ko' ? '서명' : 'Sign',
+        //       tools: [
+        //         {
+        //           name: language === 'ko' ? 'PDF에 서명' : 'Sign PDF',
+        //           href: '/sign',
+        //           icon: Signature,
+        //           color: 'text-purple-500',
+        //           highlighted: true,
+        //         },
+        //         {
+        //           name:
+        //             language === 'ko'
+        //               ? '서명 요청 (Sign.com)'
+        //               : 'Request Signature (Sign.com)',
+        //           href: '/sign-request',
+        //           icon: PenTool,
+        //           color: 'text-yellow-500',
+        //         },
+        //       ],
+        //     },
+        //     {
+        //       name: language === 'ko' ? '더 보기' : 'More',
+        //       tools: [
+        //         {
+        //           name: language === 'ko' ? 'PDF 잠금해제' : 'Unlock PDF',
+        //           href: '/unlock',
+        //           icon: LockOpen,
+        //           color: 'text-red-500',
+        //         },
+        //         {
+        //           name: language === 'ko' ? 'PDF 암호 설정' : 'Protect PDF',
+        //           href: '/protect',
+        //           icon: Lock,
+        //           color: 'text-red-500',
+        //         },
+        //         {
+        //           name: language === 'ko' ? 'PDF 평면화' : 'Flatten PDF',
+        //           href: '/flatten',
+        //           icon: DownloadIcon,
+        //           color: 'text-red-500',
+        //         },
+        //       ],
+        //     },
+        //     {
+        //       name: language === 'ko' ? '스캔' : 'Scan',
+        //       tools: [
+        //         {
+        //           name: language === 'ko' ? 'PDF 스캐너' : 'PDF Scanner',
+        //           href: '/scanner',
+        //           icon: Camera,
+        //           color: 'text-blue-500',
+        //         },
+        //       ],
+        //     },
+        //   ],
+        // },
   ];
 
   return (
@@ -423,8 +434,8 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* 솔루션 */}
-          <div>
+          {/* 솔루션 - 아직 별도 페이지가 없어 404를 유발하므로 임시로 숨김 */}
+          {/* <div>
             <h3 className='text-sm font-semibold text-gray-900 mb-4'>
               {language === 'ko' ? '솔루션' : 'Solutions'}
             </h3>
@@ -438,7 +449,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* 회사 */}
           <div>
@@ -456,7 +467,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/help'
+                  href='/contact'
                   className='text-sm text-gray-600 hover:text-gray-900 transition-colors'
                 >
                   {language === 'ko' ? '도움말' : 'Help'}
@@ -464,12 +475,13 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/blog'
+                  href='/blogs'
                   className='text-sm text-gray-600 hover:text-gray-900 transition-colors'
                 >
                   {language === 'ko' ? '블로그' : 'Blog'}
                 </Link>
               </li>
+              {/* 채용 페이지 미구현으로 404 발생하여 임시 제거
               <li>
                 <Link
                   href='/careers'
@@ -478,6 +490,7 @@ export default function Footer() {
                   {language === 'ko' ? '채용' : 'Careers'}
                 </Link>
               </li>
+              */}
             </ul>
           </div>
 
@@ -514,8 +527,9 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 앱 */}
-          <div className=''>
+          {/* 앱 섹션 - 모든 링크가 미구현 페이지(/download, /scanner, /windows-app)로 가서
+              404가 발생하므로, 실제 페이지가 준비될 때까지 비활성화합니다. */}
+          {/* <div className=''>
             <h3 className='text-sm font-semibold text-gray-900 mb-4'>
               {language === 'ko' ? '앱' : 'App'}
             </h3>
@@ -547,7 +561,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */
         </div>
 
         {/* 하단 섹션: 소셜 미디어, 저작권, 앱 다운로드 */}
