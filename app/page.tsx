@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { getBaseUrl, getOgImageUrl } from '@/lib/seo';
+import HomePage from '@/components/HomePage';
 
 export const metadata: Metadata = {
   title: 'freeconvert | 무료 이미지 변환기',
@@ -24,10 +25,6 @@ export const metadata: Metadata = {
   },
 };
 
-export default function HomeLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return children;
+export default function Home() {
+  return <HomePage />;
 }

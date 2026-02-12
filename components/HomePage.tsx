@@ -22,8 +22,8 @@ import {
 } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-export default function Home() {
-  const { t, language } = useLanguage();
+export default function HomePage() {
+  const { t } = useLanguage();
 
   // 가장 인기있는 PDF 도구들
   const popularTools = [
@@ -48,7 +48,7 @@ export default function Home() {
     {
       name: t('home.popular.tool.sign.name'),
       description: t('home.popular.tool.sign.description'),
-      href: '/edit', // PDF 편집 페이지로 연결 (서명 기능 포함)
+      href: '/edit',
       icon: Signature,
     },
     {
@@ -101,7 +101,7 @@ export default function Home() {
             ].map((keyword: string, index: number) => (
               <span
                 key={index}
-                className='rounded-full bg-blue-100 px-6 py-2 text-lg font-medium text-gray-900 transition-colors hover:bg-blue-200'
+                className='rounded-full bg-blue-100 px-6 py-2 text-lg font-medium text-gray-900 hover:bg-blue-200'
               >
                 {keyword}
               </span>
@@ -139,11 +139,11 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className='mb-4 text-gray-600'>{tool.description}</p>
-                <div className='flex items-center text-primary group-hover:text-blue-700'>
-                  <span className='text-sm font-medium'>
+                <div className='text-primary group-hover:text-blue-700'>
+                  <span className='text-sm font-medium inline-flex items-center gap-2'>
                     {t('home.popular.tryIt')}
+                    <ArrowRight className='h-4 w-4' />
                   </span>
-                  <ArrowRight className='ml-2 h-4 w-4' />
                 </div>
               </Link>
             );
@@ -193,7 +193,7 @@ export default function Home() {
               <span className='font-medium'>
                 {t('home.feature.workWithFiles.cta')}
               </span>
-              <ArrowRight className='h-5 w-5' />
+              <ArrowRight className='h-4 w-4' />
             </Link>
           </div>
 
@@ -216,7 +216,7 @@ export default function Home() {
               <span className='font-medium'>
                 {t('home.feature.digitalSignature.cta')}
               </span>
-              <ArrowRight className='h-5 w-5' />
+              <ArrowRight className='h-4 w-4' />
             </Link>
           </div>
 
@@ -239,7 +239,7 @@ export default function Home() {
               <span className='font-medium'>
                 {t('home.feature.perfectDocument.cta')}
               </span>
-              <ArrowRight className='h-5 w-5' />
+              <ArrowRight className='h-4 w-4' />
             </Link>
           </div>
 
@@ -262,7 +262,7 @@ export default function Home() {
               <span className='font-medium'>
                 {t('home.feature.allInOne.cta')}
               </span>
-              <ArrowRight className='h-5 w-5' />
+              <ArrowRight className='h-4 w-4' />
             </Link>
           </div>
         </div>

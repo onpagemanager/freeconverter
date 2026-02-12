@@ -387,11 +387,11 @@ export default function Footer() {
                             <Link
                               href={tool.href}
                               className={`flex items-center gap-2 text-sm transition-colors ${
-                                tool.highlighted
+                                (tool as { highlighted?: boolean }).highlighted
                                   ? 'bg-blue-50 px-2 py-1 rounded hover:bg-blue-100'
                                   : 'hover:text-gray-900'
                               } ${
-                                tool.highlighted
+                                (tool as { highlighted?: boolean }).highlighted
                                   ? 'text-gray-900'
                                   : 'text-gray-600'
                               }`}
