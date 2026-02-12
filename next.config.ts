@@ -36,6 +36,34 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: true, // CSS 최적화
   },
+
+  // 404 에러 발생 URL 리다이렉트 (미구현 페이지 → 유사 기능 페이지로 연결)
+  async redirects() {
+    return [
+      // 서명/보안 관련 → PDF 편집(서명 포함)
+      { source: '/sign', destination: '/edit', permanent: true },
+      { source: '/sign-request', destination: '/contact', permanent: true },
+      { source: '/protect', destination: '/edit', permanent: true },
+      { source: '/unlock', destination: '/edit', permanent: true },
+      { source: '/flatten', destination: '/edit', permanent: true },
+      // 보기/편집 관련 → PDF 편집
+      { source: '/watermark', destination: '/edit', permanent: true },
+      { source: '/crop', destination: '/edit', permanent: true },
+      { source: '/share', destination: '/edit', permanent: true },
+      // 정리/변환 관련
+      { source: '/organize', destination: '/merge', permanent: true },
+      { source: '/ai-summary', destination: '/convert', permanent: true },
+      // 블로그 (단수 → 복수)
+      { source: '/blog', destination: '/blogs', permanent: true },
+      // 회사/제품 관련
+      { source: '/careers', destination: '/contact', permanent: true },
+      { source: '/education', destination: '/about', permanent: true },
+      { source: '/pricing', destination: '/convert', permanent: true },
+      // 팀/개발자 (Footer 링크)
+      { source: '/team', destination: '/about', permanent: true },
+      { source: '/developers', destination: '/contact', permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

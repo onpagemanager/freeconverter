@@ -494,7 +494,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* 제품 */}
+          {/* 제품 - 미구현 페이지는 유사 페이지로 링크 (리다이렉트도 next.config에 등록됨) */}
           <div>
             <h3 className='text-sm font-semibold text-gray-900 mb-4'>
               {language === 'ko' ? '제품' : 'Product'}
@@ -502,7 +502,7 @@ export default function Footer() {
             <ul className='space-y-3'>
               <li>
                 <Link
-                  href='/pricing'
+                  href='/convert'
                   className='text-sm text-gray-600 hover:text-gray-900 transition-colors'
                 >
                   {language === 'ko' ? '이용 요금' : 'Pricing'}
@@ -510,7 +510,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/team'
+                  href='/about'
                   className='text-sm text-gray-600 hover:text-gray-900 transition-colors'
                 >
                   {language === 'ko' ? '팀' : 'Team'}
@@ -518,7 +518,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href='/developers'
+                  href='/contact'
                   className='text-sm text-gray-600 hover:text-gray-900 transition-colors'
                 >
                   Developers
@@ -561,7 +561,7 @@ export default function Footer() {
                 </Link>
               </li>
             </ul>
-          </div> */
+          </div> */}
         </div>
 
         {/* 하단 섹션: 소셜 미디어, 저작권, 앱 다운로드 */}
